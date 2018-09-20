@@ -1,0 +1,5 @@
+com\example\jersey\MyApplicationExceptionHandler.class
+com\example\jersey\MyApplicationException.class
+com\example\jersey\User.class
+com\example\jersey\UserServiceImpl.class
+com\example\jersey\UserService.class

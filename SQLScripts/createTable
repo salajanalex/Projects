@@ -1,0 +1,23 @@
+CREATE TABLE address (
+	idAddress int NOT NULL UNIQUE,
+	street varchar(45),
+	number int,
+	city varchar(45),
+	country varchar(45),
+	PRIMARY KEY (idAddress)
+);
+
+CREATE TABLE company(
+	idCompany int NOT NULL UNIQUE,
+	name varchar(45),
+	domain varchar(45),
+	PRIMARY KEY (idCompany)
+);
+
+CREATE TABLE person(
+	idPerson int NOT NULL UNIQUE,
+	name varchar(45),
+	surname varchar(45),
+	age int,
+	PRIMARY KEY (idPerson)
+);

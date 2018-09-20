@@ -1,0 +1,5 @@
+com\example\jersey\exceptionHandler\MyApplicationExceptionHandler.class
+com\example\jersey\Subscription.class
+com\example\jersey\SubscriptionService.class
+com\example\jersey\exceptionHandler\MyApplicationException.class
+com\example\jersey\SubscriptionServiceImpl.class

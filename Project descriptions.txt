@@ -1,0 +1,3 @@
+ExampleAPI - short example with jersey + GET and POST requests.
+REST2 - jersey + REST on DB + Custom Exception Class + hibernate (DB Config) + Maven + WebApp + Response Validation
+RESTServices - same as REST2. Microservices simulation, RESTServices makes request on REST2 app, the apps communicate.

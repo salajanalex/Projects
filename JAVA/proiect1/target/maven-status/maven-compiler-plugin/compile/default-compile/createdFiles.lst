@@ -1,0 +1,16 @@
+ro\nttdata\tutorial\exceptions\ApplicationExceptionMapper.class
+ro\nttdata\tutorial\admin\entity\Person.class
+ro\nttdata\tutorial\consumer\rest\RESTConfiguration.class
+ro\nttdata\tutorial\admin\entity\Address.class
+ro\nttdata\tutorial\consumer\producer\entity\BusinessObject.class
+ro\nttdata\tutorial\consumer\producer\boundary\Producer.class
+ro\nttdata\tutorial\consumer\boundary\Consumer.class
+ro\nttdata\tutorial\consumer\producer\boundary\TimerProducer$ActionState.class
+ro\nttdata\tutorial\admin\controller\Controller.class
+ro\nttdata\tutorial\status\boundery\StatusResource.class
+ro\nttdata\tutorial\consumer\producer\MyApplicationException.class
+ro\nttdata\tutorial\consumer\producer\ActionState.class
+ro\nttdata\tutorial\consumer\producer\ActionState$1.class
+ro\nttdata\tutorial\exceptions\ValidationExceptionMapper.class
+ro\nttdata\tutorial\admin\boundary\PersonResource.class
+ro\nttdata\tutorial\consumer\producer\boundary\TimerProducer.class

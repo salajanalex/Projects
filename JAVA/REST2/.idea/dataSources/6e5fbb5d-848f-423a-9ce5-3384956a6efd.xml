@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="restdb@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.11">
+    <root id="1">
+      <ServerVersion>9.5.14</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>12373</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="restdb">
+      <ObjectId>16393</ObjectId>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>25</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <role id="4" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="5" parent="3" name="information_schema">
+      <ObjectId>12081</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="6" parent="3" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="7" parent="3" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="8" parent="3" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="9" parent="3" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="10" parent="3" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2018-09-17.10:37:11.932</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1011</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="11" parent="3" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+    </access-method>
+    <access-method id="12" parent="3" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+    </access-method>
+    <access-method id="13" parent="3" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+    </access-method>
+    <access-method id="14" parent="3" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+    </access-method>
+    <access-method id="15" parent="3" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+    </access-method>
+    <access-method id="16" parent="3" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+    </access-method>
+    <sequence id="17" parent="10" name="subscriptions_subscriptionid_seq">
+      <ObjectId>17402</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>994</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="18" parent="10" name="users_userid_seq">
+      <ObjectId>17365</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>935</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="19" parent="10" name="utilizatori_iduser_seq">
+      <ObjectId>17131</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>799</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="20" parent="10" name="subscriptions">
+      <ObjectId>17376</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1011</StateNumber>
+    </table>
+    <table id="21" parent="10" name="users">
+      <ObjectId>17355</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1010</StateNumber>
+    </table>
+    <table id="22" parent="10" name="usersubscription">
+      <ObjectId>17405</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1011</StateNumber>
+    </table>
+    <column id="23" parent="20" name="subscriptionid">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>995</StateNumber>
+      <DefaultExpression>nextval(&apos;subscriptions_subscriptionid_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>subscriptions_subscriptionid_seq</SequenceName>
+    </column>
+    <column id="24" parent="20" name="price">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>971</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="25" parent="20" name="name">
+      <Position>5</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <StateNumber>981</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="26" parent="20" name="description">
+      <Position>6</Position>
+      <DataType>varchar(300)|0s</DataType>
+      <StateNumber>983</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="27" parent="20" name="subscriptions_pkey">
+      <ObjectId>17396</ObjectId>
+      <ColNames>subscriptionid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="20" name="subscriptions_pkey">
+      <ObjectId>17397</ObjectId>
+      <ColNames>subscriptionid</ColNames>
+      <UnderlyingIndexName>subscriptions_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="21" name="userid">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>941</StateNumber>
+      <DefaultExpression>nextval(&apos;users_userid_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>users_userid_seq</SequenceName>
+    </column>
+    <column id="30" parent="21" name="email">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>888</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="31" parent="21" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>888</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="32" parent="21" name="username">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>888</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="33" parent="21" name="users_pk">
+      <ObjectId>17369</ObjectId>
+      <ColNames>userid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="34" parent="21" name="users_userid_uindex">
+      <ObjectId>17368</ObjectId>
+      <ColNames>userid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="35" parent="21" name="users_pk">
+      <ObjectId>17370</ObjectId>
+      <ColNames>userid</ColNames>
+      <UnderlyingIndexName>users_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="22" name="userid">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1008</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="37" parent="22" name="subscriptionid">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1008</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="38" parent="22" name="usersubscription_pkey">
+      <ObjectId>17408</ObjectId>
+      <ColNames>subscriptionid
+userid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="39" parent="22" name="usersubscription_pkey">
+      <ObjectId>17409</ObjectId>
+      <ColNames>subscriptionid
+userid</ColNames>
+      <UnderlyingIndexName>usersubscription_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="40" parent="22" name="userid_fk">
+      <ObjectId>17420</ObjectId>
+      <ColNames>userid</ColNames>
+      <RefTableId>17355</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pk</RefKeyName>
+      <RefColNames>userid</RefColNames>
+    </foreign-key>
+    <foreign-key id="41" parent="22" name="subscription_fk">
+      <ObjectId>17425</ObjectId>
+      <ColNames>subscriptionid</ColNames>
+      <RefTableId>17376</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>subscriptions</RefTableName>
+      <RefKeyName>subscriptions_pkey</RefKeyName>
+      <RefColNames>subscriptionid</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
