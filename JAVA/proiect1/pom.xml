@@ -29,7 +29,7 @@
 
   <distributionManagement>
     <repository>
-      <idPerson>Java EE 7</idPerson>
+      <id>Java EE 7</id>
       <url>https://maven.java.net/content/groups/promoted/</url>
     </repository>
   </distributionManagement>

@@ -11,20 +11,21 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idperson")
     private int idPerson;
-    @Column(name = "name")
     private String name;
-    @Column(name = "surname")
     private String surname;
-    @Column(name = "age")
     private int age;
+    @Transient
+    private String completeName;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idCompany")
+    @JoinColumn(name = "idcompany")
     public Company company;
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idAdress")
+    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL,  //in mappedBy -> numele campului de care depinde.
+            fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "idaddress")
     private Address address;
 
-    public Person() {}
+    public Person() {
+    }
 
     public Person(int idPerson, String name, String surname, int age) {
         this.idPerson = idPerson;
@@ -63,6 +64,14 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getCompleteName() {
+        return completeName;
+    }
+
+    public void setCompleteName(String name, String surname) {
+        this.completeName = name + " " + surname;
     }
 
     public Company getCompany() {

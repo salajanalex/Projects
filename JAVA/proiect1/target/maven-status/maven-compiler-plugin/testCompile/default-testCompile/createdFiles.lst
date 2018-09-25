@@ -1,3 +1,7 @@
 ro\nttdata\tutorial\status\PersonResourceTest.class
-ro\nttdata\tutorial\status\StatusResourceTest.class
+ro\nttdata\tutorial\admin\controller\PersonControllerTest.class
+ro\nttdata\tutorial\admin\controller\CompanyControllerTest.class
 ro\nttdata\tutorial\status\EchoValidationTest.class
+ro\nttdata\tutorial\admin\controller\AddressControllerTest.class
+ro\nttdata\tutorial\status\StatusResourceTest.class
+ro\nttdata\tutorial\status\PersonResourcetestNoAnnTest.class

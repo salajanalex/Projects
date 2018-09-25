@@ -9,16 +9,11 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idaddress")
     private int idAddress;
-    @Column(name = "street")
     private String street;
-    @Column(name = "number")
     private int number;
-    @Column(name = "city")
     private String city;
-    @Column(name = "country")
     private String country;
-    @OneToOne(mappedBy = "adress", cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY, optional = false)
+    @OneToOne(fetch = FetchType.LAZY)
     private Person person;
 
     public Address() {

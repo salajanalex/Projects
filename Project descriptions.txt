@@ -1,3 +1,5 @@
 ExampleAPI - short example with jersey + GET and POST requests.
 REST2 - jersey + REST on DB + Custom Exception Class + hibernate (DB Config) + Maven + WebApp + Response Validation
 RESTServices - same as REST2. Microservices simulation, RESTServices makes request on REST2 app, the apps communicate.
+pragmaticTest - din tutorialul https://www.safaribooksonline.com/library/view/pragmatic-unit-testing/9781680500769/f_0015.html
+proiect1 - proiect Sava - TESTING

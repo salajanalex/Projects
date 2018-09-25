@@ -11,21 +11,25 @@ import java.util.List;
 public class Company implements Serializable {
 
     @Id
-    @Column(name="idcompany")
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name = "idcompany")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCompany;
-    @Column(name = "name")
     private String name;
-    @Column(name = "domain")
     private String domain;
     @JsonIgnore
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "company", cascade = CascadeType.PERSIST)
-    public List<Person> personList;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "company", cascade = CascadeType.MERGE)
+    private List<Person> personList;
 
-    public Company() {}
+    public Company() {
+    }
 
     public Company(int id, String name, String domain) {
         this.idCompany = id;
+        this.name = name;
+        this.domain = domain;
+    }
+
+    public Company(String name, String domain) {
         this.name = name;
         this.domain = domain;
     }
