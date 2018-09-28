@@ -13,7 +13,7 @@ import java.util.List;
 @Stateful
 public class CompanyController {
 
-    @PersistenceContext(unitName = "testProject", type = PersistenceContextType.EXTENDED)
+    @PersistenceContext(unitName = "testsProject")
     private EntityManager entityManager;
 
     public void addCompany(Company company) {
@@ -21,8 +21,10 @@ public class CompanyController {
     }
 
 
-    public void deleteCompany(Company company) {
-        entityManager.remove(company);
+    public void deleteCompany(int id) {
+        Query query = entityManager.createQuery("DELETE c from Company c WHERE c.id = :id") ;
+        query.setParameter("id",id);
+        query.executeUpdate();
     }
 
     public Company getCompanyById(int id) {

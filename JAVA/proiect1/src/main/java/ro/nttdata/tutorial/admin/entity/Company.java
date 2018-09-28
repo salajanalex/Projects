@@ -7,13 +7,12 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "company")
+//@Table(name = "company", schema = "proiect1")
 public class Company implements Serializable {
 
     @Id
-    @Column(name = "idcompany")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idCompany;
+    private int idcompany;
     private String name;
     private String domain;
     @JsonIgnore
@@ -24,7 +23,7 @@ public class Company implements Serializable {
     }
 
     public Company(int id, String name, String domain) {
-        this.idCompany = id;
+        this.idcompany = id;
         this.name = name;
         this.domain = domain;
     }
@@ -34,12 +33,12 @@ public class Company implements Serializable {
         this.domain = domain;
     }
 
-    public int getIdCompany() {
-        return idCompany;
+    public int getIdcompany() {
+        return idcompany;
     }
 
-    public void setIdCompany(int idCompany) {
-        this.idCompany = idCompany;
+    public void setIdcompany(int idcompany) {
+        this.idcompany = idcompany;
     }
 
     public String getName() {
@@ -69,7 +68,7 @@ public class Company implements Serializable {
     @Override
     public String toString() {
         return "Company{" +
-                "idCompany=" + idCompany +
+                "idcompany=" + idcompany +
                 ", name='" + name + '\'' +
                 ", domain='" + domain + '\'' +
                 '}';

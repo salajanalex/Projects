@@ -8,6 +8,7 @@ import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.omg.CORBA.Any;
 import ro.nttdata.tutorial.admin.entity.Address;
 
 import javax.persistence.EntityManager;
@@ -19,7 +20,7 @@ import static junit.framework.TestCase.assertEquals;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
-@RunWith(MockitoJUnitRunner.Silent.class)
+@RunWith(MockitoJUnitRunner.class)
 public class AddressControllerTest {
 
     @InjectMocks
@@ -44,8 +45,10 @@ public class AddressControllerTest {
 
     @Test
     public void testDeleteAddress() {
-        addressController.deleteAddress(address);
-        verify(entityManager, times(1)).remove(address);
+        Query query = mock(Query.class);
+        when(entityManager.createQuery(anyString())).thenReturn(query);
+        addressController.deleteAddress(anyInt());
+        verify(query, times(1)).executeUpdate();
     }
 
     @Test
@@ -60,19 +63,21 @@ public class AddressControllerTest {
 
     @Test
     public void testGetAddressById() {
-        Address newAdd = addressController.getAddressById(address.getIdAddress());
-        when(entityManager.find(Address.class, address.getIdAddress())).thenReturn(newAdd);
+        Address newAdd = new Address();
+        when(entityManager.find(any(Class.class), anyInt())).thenReturn(newAdd);
+        Address mockAddress = addressController.getAddressById(1);
+        assertEquals(newAdd, mockAddress);
     }
 
     @Test
     public void testUdpateAddress() {
-        addressController.udpateAddress(address);
+        addressController.updateAddress(address);
         verify(entityManager, times(1)).merge(address);
     }
 
     @Test
     public void testUpdateAddress2() {
-        addressController.udpateAddress(address);
+        addressController.updateAddress(address);
         verify(entityManager).merge(captor.capture());
         assertEquals(captor.getValue(), address);
     }

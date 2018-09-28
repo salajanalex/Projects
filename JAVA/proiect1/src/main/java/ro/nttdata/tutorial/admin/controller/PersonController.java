@@ -10,17 +10,17 @@ import java.util.List;
 @Stateful
 public class PersonController {
 
-    @Inject
-    @PersistenceContext(unitName = "testProject", type = PersistenceContextType.EXTENDED)
+    @PersistenceContext(unitName = "testsProject")
     private EntityManager entityManager;
 
     public void addPerson(Person person) {
         entityManager.persist(person);
     }
 
-
-    public void deletePerson(Person person) {
-        entityManager.remove(person);
+    public void deletePerson(int id) {
+        Query query = entityManager.createQuery("DELETE p from Person p WHERE p.id = :id") ;
+        query.setParameter("id", id);
+        query.executeUpdate();
     }
 
     public Person getPersonById(int id) {
@@ -28,7 +28,7 @@ public class PersonController {
     }
 
     public List<Person> getAllPersons() {
-        Query query = entityManager.createQuery("SELECT p FROM Person p");
+        Query query = entityManager.createQuery("SELECT p FROM Person as p");
         return query.getResultList();
     }
 

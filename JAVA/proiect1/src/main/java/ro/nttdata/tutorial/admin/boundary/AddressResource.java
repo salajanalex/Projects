@@ -1,7 +1,9 @@
 package ro.nttdata.tutorial.admin.boundary;
 
 import ro.nttdata.tutorial.admin.controller.AddressController;
+import ro.nttdata.tutorial.admin.controller.PersonController;
 import ro.nttdata.tutorial.admin.entity.Address;
+import ro.nttdata.tutorial.admin.entity.Person;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -15,9 +17,12 @@ public class AddressResource {
     @Inject
     private AddressController controller;
 
+    @Inject
+    private PersonController personController;
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/alladdresss")
+    @Path("/alladdresses")
     public Response getAllAddresss() {
         List<Address> addressList = controller.getAllAddresses();
         return Response.status(Response.Status.OK).entity(addressList).build();
@@ -46,18 +51,32 @@ public class AddressResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/update")
-    public Response updateAddress(Address address) {
-        controller.updateAddress(address);
-        return Response.ok(address).build();
+    @Path("/update/personid/{id}")
+    public Response updateAddress(@PathParam("id") int id, Address address) {
+        Person person = personController.getPersonById(id);
+        if (person != null) {
+            person.setAddress(address);
+            personController.updatePerson(person);
+            return Response.ok(address).build();
+        } else
+            return Response.ok("person with given id not found").build();
     }
 
     @GET
-    @Path("/delete")
+    @Path("/delete/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response deleteAddress(Address address) {
-        controller.deleteAddress(address);
-        return Response.ok("Address with id= " + address.getIdAddress() + " deleted").build();
+    public Response deleteAddress(@PathParam("id") int id) {
+        controller.deleteAddress(id);
+        return Response.ok("Address with id= " + id + " deleted").build();
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/update")
+    public Response updateAddressOfPerson(Address address) {
+        controller.updateAddress(address);
+        return Response.ok(address).build();
     }
 
 

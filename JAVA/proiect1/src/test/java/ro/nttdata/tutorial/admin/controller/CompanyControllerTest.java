@@ -9,7 +9,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import ro.nttdata.tutorial.admin.entity.Company;
-import ro.nttdata.tutorial.consumer.producer.MyApplicationException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -20,7 +19,7 @@ import static junit.framework.TestCase.assertEquals;
 import static org.mockito.Mockito.*;
 
 
-@RunWith(MockitoJUnitRunner.Silent.class)
+@RunWith(MockitoJUnitRunner.class)
 public class CompanyControllerTest {
 
     @InjectMocks
@@ -51,9 +50,11 @@ public class CompanyControllerTest {
     }
 
     @Test
-    public void testDeleteCompany() throws MyApplicationException {
-        companyController.deleteCompany(company);
-        verify(entityManager, times(1)).remove(company);
+    public void testDeleteCompany() {
+        Query query = mock(Query.class);
+        when(entityManager.createQuery(anyString())).thenReturn(query);
+        companyController.deleteCompany(anyInt());
+        verify(query, times(1)).executeUpdate();
     }
 
     @Test
@@ -64,8 +65,10 @@ public class CompanyControllerTest {
 
     @Test
     public void testGetCompanyById() {
-        Company newComp = companyController.getCompanyById(company.getIdCompany());
-        when(entityManager.find(Company.class, company.getIdCompany())).thenReturn(newComp);
+        Company newComp = new Company();
+        when(entityManager.find(any(Class.class), anyInt())).thenReturn(newComp);
+        Company acutlaC = companyController.getCompanyById(1);
+        assertEquals(newComp, acutlaC);
     }
 
     @Test

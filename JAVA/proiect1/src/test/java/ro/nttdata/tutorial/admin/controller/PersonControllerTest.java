@@ -18,7 +18,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
-@RunWith(MockitoJUnitRunner.Silent.class)
+@RunWith(MockitoJUnitRunner.class)
 public class PersonControllerTest {
 
     @InjectMocks
@@ -42,14 +42,18 @@ public class PersonControllerTest {
 
     @Test
     public void testDeletePerson() {
-        personController.deletePerson(person);
-        verify(entityManager, times(1)).remove(person);
+        final Query query = mock(Query.class);
+        when(entityManager.createQuery(anyString())).thenReturn(query);
+        personController.deletePerson(anyInt());
+        verify(query, times(1)).executeUpdate();
     }
 
     @Test
     public void testGetPersonById() {
-        Person newComp = personController.getPersonById(person.getIdPerson());
-        when(entityManager.find(Person.class, person.getIdPerson())).thenReturn(newComp);
+        Person person = new Person();
+        when(entityManager.find(any(Class.class), anyInt())).thenReturn(person);
+        Person mockPerson = personController.getPersonById(1);
+        assertEquals(person, mockPerson);
     }
 
     @Test

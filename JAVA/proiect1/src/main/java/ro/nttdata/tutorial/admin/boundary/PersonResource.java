@@ -36,6 +36,11 @@ public class PersonResource {
         return builder.build();
     }
 
+    /**
+     * It should work for simple person or person with address
+     * @param person
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -56,11 +61,11 @@ public class PersonResource {
     }
 
     @GET
-    @Path("/delete")
+    @Path("/delete/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response deletePerson(Person person) {
-        controller.deletePerson(person);
-        return Response.ok("Person with id= " + person.getIdPerson() + " deleted").build();
+    public Response deletePerson(@PathParam("id") int id) {
+        controller.deletePerson(id);
+        return Response.ok("Person with id= " + id + " deleted").build();
     }
 
 

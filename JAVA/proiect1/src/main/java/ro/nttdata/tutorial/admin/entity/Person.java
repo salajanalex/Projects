@@ -4,13 +4,12 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "person")
+//@Table(name = "person", schema = "proiect1")
 public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idperson")
-    private int idPerson;
+    private int idperson;
     private String name;
     private String surname;
     private int age;
@@ -19,8 +18,9 @@ public class Person {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idcompany")
     public Company company;
+
     @OneToOne(mappedBy = "person", cascade = CascadeType.ALL,  //in mappedBy -> numele campului de care depinde.
-            fetch = FetchType.LAZY, optional = false)
+            fetch = FetchType.LAZY)
     @JoinColumn(name = "idaddress")
     private Address address;
 
@@ -28,18 +28,18 @@ public class Person {
     }
 
     public Person(int idPerson, String name, String surname, int age) {
-        this.idPerson = idPerson;
+        this.idperson = idPerson;
         this.name = name;
         this.surname = surname;
         this.age = age;
     }
 
-    public int getIdPerson() {
-        return idPerson;
+    public int getIdperson() {
+        return idperson;
     }
 
-    public void setIdPerson(int idPerson) {
-        this.idPerson = idPerson;
+    public void setIdperson(int idperson) {
+        this.idperson = idperson;
     }
 
     public String getName() {
@@ -93,7 +93,7 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "idPerson=" + idPerson +
+                "idperson=" + idperson +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", age=" + age +

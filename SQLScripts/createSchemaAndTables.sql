@@ -1,5 +1,6 @@
-﻿DROP SCHEMA IF EXISTS test1 CASCADE;
-CREATE SCHEMA test1
+﻿DROP SCHEMA IF EXISTS proiect1 CASCADE;
+CREATE SCHEMA proiect1
+--SET search_path TO test1;
 
 CREATE TABLE address (
 	idaddress SERIAL UNIQUE,  --key = integer; BIGSERIAL = large integer
@@ -26,19 +27,19 @@ CREATE TABLE person(
 	idcompany int4,
 	PRIMARY KEY (idPerson),
 	UNIQUE(idaddress),      -- daca nu as avea asta, ar fi 1-n ? 
-	FOREIGN KEY (idaddress) REFERENCES address(idaddress) ON DELETE RESTRICT,  --  cum mai bine? : CONSTRAINT fk_address_id FOREIGN KEY (idperson) REFERENCES address(idaddress), + fara camp de foreign key
+	FOREIGN KEY (idaddress) REFERENCES address(idaddress) ON DELETE CASCADE,  --  cum mai bine? : CONSTRAINT fk_address_id FOREIGN KEY (idperson) REFERENCES address(idaddress), + fara camp de foreign key
 	FOREIGN KEY (idcompany) REFERENCES company(idcompany) ON DELETE RESTRICT   -- CASCADE - stergel RESTRICT - prevents deletion of referenced row. NO ACTION = DEFAULT;
 );
 
-INSERT INTO test1.company (name, domain) 
+INSERT INTO proiect1.company (name, domain) 
 	VALUES ('NTT Data', 'IT'),
 	('EBS', 'IT');
 
-INSERT INTO test1.address (street, number, city, country) 
+INSERT INTO proiect1.address (street, number, city, country) 
 	VALUES ('Lucian Blaga', 117, 'Cluj', 'Romania'),
 	('Marcelelor', 2234, 'Bistrita', 'Romania');
 
-INSERT INTO test1.person (name, surname, age, idaddress, idcompany) 
+INSERT INTO proiect1.person (name, surname, age, idaddress, idcompany) 
 	VALUES ('Alex', 'Salajan', 22, 1, 1),
 	('Sava', 'Cristin', 22, 2, 2);
 

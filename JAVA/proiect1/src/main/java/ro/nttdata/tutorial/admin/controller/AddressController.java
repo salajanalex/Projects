@@ -10,16 +10,17 @@ import java.util.List;
 @Stateful
 public class AddressController {
 
-    @Inject
-    @PersistenceContext(unitName = "testProject", type = PersistenceContextType.EXTENDED)
+    @PersistenceContext(unitName = "testsProject")
     private EntityManager entityManager;
 
     public void addAddress(Address address) {
         entityManager.persist(address);
     }
 
-    public void deleteAddress(Address address) {
-        entityManager.remove(address);
+    public void deleteAddress(int id) {
+        Query query = entityManager.createQuery("DELETE a from Address a WHERE a.idaddress = :id");
+        query.setParameter("id",id);
+        query.executeUpdate();
     }
 
     public Address getAddressById(int id) {

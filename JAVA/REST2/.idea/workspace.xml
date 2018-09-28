@@ -2,40 +2,94 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de9c7e5d-a071-44cb-91a0-d97be023b1e0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../proiect1/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REST2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/.idea/dataSources/27c6cf0d-715e-4ff8-8df1-d390680cf72f.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/.idea/dataSources/1b9eeea3-e4b2-4ec3-8aa9-2a9422de5115.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/boundary/AddressResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/boundary/AddressResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/boundary/CompanyResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/boundary/CompanyResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/boundary/PersonResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/boundary/PersonResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/controller/AddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/controller/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/controller/PersonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/entity/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/entity/Company.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/entity/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/status/PersonResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/status/PersonResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/consumer/boundary/Consumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/consumer/producer/ActionState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/consumer/producer/MyApplicationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/consumer/producer/boundary/Producer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/consumer/producer/boundary/TimerProducer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/consumer/producer/entity/BusinessObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/consumer/rest/RESTConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/webapp/WEB-INF/glassfish-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/webapp/WEB-INF/glassfish-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/admin/controller/AddressControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/admin/controller/AddressControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/admin/controller/CompanyControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/admin/controller/CompanyControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/admin/controller/PersonControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/admin/controller/PersonControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/status/PersonResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/admin/boundary/PersonResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/boundary/AddressResourde.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/boundary/CompanyResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/boundary/CompanyResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/boundary/PersonResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/boundary/PersonResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/controller/AddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/controller/AddressController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/controller/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/controller/CompanyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/controller/PersonController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/entity/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/entity/Address.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/entity/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/entity/Company.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/entity/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/entity/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/consumer/boundary/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/consumer/producer/ActionState$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/consumer/producer/ActionState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/consumer/producer/MyApplicationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/consumer/producer/boundary/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/consumer/producer/boundary/TimerProducer$ActionState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/consumer/producer/boundary/TimerProducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/consumer/producer/entity/BusinessObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/consumer/rest/RESTConfiguration.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1.war" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/AddressResourde.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/CompanyResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/CompanyResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/PersonResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/PersonResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/AddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/AddressController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/CompanyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/PersonController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Company.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/sonar/.sonar_lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/sonar/report-task.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/consumer/boundary/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/consumer/producer/ActionState$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/consumer/producer/ActionState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/consumer/producer/MyApplicationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/consumer/producer/boundary/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/consumer/producer/boundary/TimerProducer$ActionState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/consumer/producer/boundary/TimerProducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/consumer/producer/entity/BusinessObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/consumer/rest/RESTConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/glassfish-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/glassfish-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.controller.AddressControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.controller.AddressControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.controller.CompanyControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.controller.CompanyControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.controller.PersonControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.controller.PersonControllerTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.status.EchoValidationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.status.EchoValidationTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.status.PersonResourceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.status.PersonResourceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.status.PersonResourceTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.status.PersonResourcetestNoAnnTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.status.PersonResourcetestNoAnnTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.status.StatusResourceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.status.StatusResourceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.controller.AddressControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.controller.AddressControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.controller.PersonControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.controller.PersonControllerTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.status.EchoValidationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.status.EchoValidationTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.status.PersonResourceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.status.PersonResourceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/status/PersonResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/status/PersonResourceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/status/PersonResourcetestNoAnnTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/status/PersonResourcetestNoAnnTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project descriptions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project descriptions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.status.PersonResourceTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.status.PersonResourcetestNoAnnTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.status.PersonResourcetestNoAnnTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/admin/controller/AddressControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/admin/controller/AddressControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/admin/controller/CompanyControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/admin/controller/CompanyControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/admin/controller/PersonControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/admin/controller/PersonControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/status/PersonResourceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JS/JavaScript30/05 - Flex Panel Gallery/index-START.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../JS/JavaScript30/05 - Flex Panel Gallery/index-START.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SQLScripts/createSchemaAndTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../SQLScripts/createSchemaAndTables.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,23 +132,6 @@
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="restdb: database" type="6d9b600a:PostgresImplModel$Database" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="restdb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="restdb: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="restdb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="restdb: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -152,12 +189,23 @@
     <session id="-1900820073">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.file.types.open" />
-      <usages-collector id="statistics.file.extensions.open" />
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.file.extensions.edit" />
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -168,20 +216,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://6e5fbb5d-848f-423a-9ce5-3384956a6efd/database/restdb/schema/public/table/usersubscription">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+            <state relative-caret-position="187">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -195,7 +234,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" column="54" lean-forward="true" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+              <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -203,16 +242,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="153">
+              <caret line="9" column="61" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-bundle/1.9.1/jersey-bundle-1.9.1.jar!/com/sun/jersey/spi/container/servlet/ServletContainer.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/jersey/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
+            <state>
               <caret line="118" column="4" selection-start-line="118" selection-start-column="4" selection-end-line="121" selection-end-column="41" />
             </state>
           </provider>
@@ -294,11 +342,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1913" />
+    <option name="y" value="-7" />
+    <option name="width" value="1550" />
+    <option name="height" value="838" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -309,7 +357,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,10 +390,38 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="jersey" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="REST2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="REST2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="REST2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="REST2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="REST2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="REST2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="REST2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="REST2" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -453,18 +528,19 @@
       <workItem from="1537179910569" duration="2653000" />
       <workItem from="1537426632036" duration="146000" />
       <workItem from="1537874337315" duration="2784000" />
+      <workItem from="1537942280961" duration="3102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9815000" />
+    <option name="totallyTimeSpent" value="12917000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1913" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24626866" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992908" visible="true" weight="0.31342283" />
+      <window_info id="Structure" order="1" sideWeight="0.50070924" side_tool="true" visible="true" weight="0.31342283" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Persistence" order="3" side_tool="true" />
       <window_info id="Designer" order="4" />
@@ -488,7 +564,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.20469083" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.25771812" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
     </layout>
@@ -501,20 +577,20 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="das://6e5fbb5d-848f-423a-9ce5-3384956a6efd/database/restdb/schema/public/table/users" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+    <entry file="das://6e5fbb5d-848f-423a-9ce5-3384956a6efd/database/restdb/schema/public/table/usersubscription">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6e5fbb5d-848f-423a-9ce5-3384956a6efd/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="272">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -552,24 +628,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://6e5fbb5d-848f-423a-9ce5-3384956a6efd/database/restdb/schema/public/table/usersubscription">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="54" lean-forward="true" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/jersey/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
+        <state>
           <caret line="118" column="4" selection-start-line="118" selection-start-column="4" selection-end-line="121" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="61" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-bundle/1.9.1/jersey-bundle-1.9.1.jar!/com/sun/jersey/spi/container/servlet/ServletContainer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>

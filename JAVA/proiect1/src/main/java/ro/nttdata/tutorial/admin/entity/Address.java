@@ -3,36 +3,37 @@ package ro.nttdata.tutorial.admin.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "adress")
+//@Table(name = "address", schema = "proiect1")
 public class Address {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idaddress")
-    private int idAddress;
+    private int idaddress;
     private String street;
     private int number;
     private String city;
     private String country;
+
     @OneToOne(fetch = FetchType.LAZY)
     private Person person;
 
     public Address() {
     }
 
-    public Address(int idAddress, String street, int number, String city, String country) {
-        this.idAddress = idAddress;
+    public Address(int idaddress, String street, int number, String city, String country) {
+        this.idaddress = idaddress;
         this.street = street;
         this.number = number;
         this.city = city;
         this.country = country;
     }
 
-    public int getIdAddress() {
-        return idAddress;
+    public int getIdaddress() {
+        return idaddress;
     }
 
-    public void setIdAddress(int idAddress) {
-        this.idAddress = idAddress;
+    public void setIdaddress(int idaddress) {
+        this.idaddress = idaddress;
     }
 
     public String getStreet() {
@@ -78,7 +79,7 @@ public class Address {
     @Override
     public String toString() {
         return "Address{" +
-                "idAddress=" + idAddress +
+                "idaddress=" + idaddress +
                 ", street='" + street + '\'' +
                 ", number=" + number +
                 ", city='" + city + '\'' +
