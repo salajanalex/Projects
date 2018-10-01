@@ -1,5 +1,7 @@
 package ro.nttdata.tutorial.admin.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 
@@ -17,11 +19,11 @@ public class Person {
     private String completeName;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idcompany")
+    @JsonIgnore
     public Company company;
 
     @OneToOne(mappedBy = "person", cascade = CascadeType.ALL,  //in mappedBy -> numele campului de care depinde.
-            fetch = FetchType.LAZY)
-    @JoinColumn(name = "idaddress")
+            fetch = FetchType.LAZY, optional = false)
     private Address address;
 
     public Person() {

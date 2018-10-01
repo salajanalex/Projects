@@ -12,7 +12,8 @@
 
     <init-param>
       <param-name>jersey.config.server.provider.packages</param-name>
-      <param-value>ro.nttdata.tutorial</param-value>
+      <param-value>ro.nttdata.tutorial,com.jersey.jaxb,com.fasterxml.jackson.jaxrs.json</param-value>
+      <!--com.jersey.jaxb, com.fasterxml.jackson.jaxrs.json-->
     </init-param>
 
     <init-param>

@@ -1,20 +1,20 @@
 package ro.nttdata.tutorial.admin.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
 //@Table(name = "address", schema = "proiect1")
 public class Address {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int idaddress;
     private String street;
     private int number;
     private String city;
     private String country;
 
-    @OneToOne(fetch = FetchType.LAZY)
     private Person person;
 
     public Address() {
@@ -28,6 +28,8 @@ public class Address {
         this.country = country;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getIdaddress() {
         return idaddress;
     }
@@ -68,6 +70,9 @@ public class Address {
         this.country = country;
     }
 
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idperson")
+    @JsonIgnore  //ca sa nu mearga lainfinit din adresa in persoana si invers.
     public Person getPerson() {
         return person;
     }

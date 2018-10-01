@@ -15,7 +15,6 @@ public class Company implements Serializable {
     private int idcompany;
     private String name;
     private String domain;
-    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "company", cascade = CascadeType.MERGE)
     private List<Person> personList;
 

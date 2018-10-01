@@ -51,13 +51,12 @@
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
       <version>${mockito.version}</version>
-        <scope>test</scope>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.glassfish.jersey.core</groupId>
       <artifactId>jersey-common</artifactId>
       <version>${glassfish.version}</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
@@ -65,27 +64,32 @@
       <version>${jersey_version}</version>
     </dependency>
     <dependency>
-      <groupId>org.glassfish.jersey.media</groupId>
-      <artifactId>jersey-media-json-jackson</artifactId>
+      <groupId>com.fasterxml.jackson.jaxrs</groupId>
+      <artifactId>jackson-jaxrs-json-provider</artifactId>
       <version>${jersey_version}</version>
     </dependency>
     <dependency>
-      <groupId>org.glassfish.jersey.ext</groupId>
-      <artifactId>jersey-bean-validation</artifactId>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
       <version>${jersey_version}</version>
     </dependency>
+    <!--<dependency>-->
+    <!--<groupId>org.glassfish.jersey.ext</groupId>-->
+    <!--<artifactId>jersey-bean-validation</artifactId>-->
+    <!--<version>${jersey_version}</version>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-validator</artifactId>
       <version>${hibernate-validator.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.glassfish</groupId>
-      <artifactId>javax.el</artifactId>
-      <version>${javax-el.version}</version>
-      <scope>test</scope>
-    </dependency>
+    <!--<dependency>-->
+    <!--<groupId>org.glassfish</groupId>-->
+    <!--<artifactId>javax.el</artifactId>-->
+    <!--<version>${javax-el.version}</version>-->
+    <!--<scope>test</scope>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
@@ -132,3 +136,137 @@
     </pluginManagement>
   </build>
 </project>
+
+
+
+
+  <!--<properties>-->
+    <!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+    <!--<maven.compiler.source>1.8</maven.compiler.source>-->
+    <!--<maven.compiler.target>1.8</maven.compiler.target>-->
+    <!--<junit.version>4.11</junit.version>-->
+    <!--<javax.version>LATEST</javax.version>-->
+    <!--<mockito.version>2.7.13</mockito.version>-->
+    <!--<glassfish.version>2.22.4</glassfish.version>-->
+    <!--<jersey_version>2.22.4</jersey_version>-->
+    <!--<hibernate-validator.version>5.1.2.Final</hibernate-validator.version>-->
+    <!--<javax-el.version>3.0.0</javax-el.version>-->
+    <!--<postgress.version>42.2.2</postgress.version>-->
+  <!--</properties>-->
+
+  <!--<distributionManagement>-->
+    <!--<repository>-->
+      <!--<id>Java EE 7</id>-->
+      <!--<url>https://maven.java.net/content/groups/promoted/</url>-->
+    <!--</repository>-->
+  <!--</distributionManagement>-->
+
+  <!--<dependencies>-->
+    <!--<dependency>-->
+      <!--<groupId>javax</groupId>-->
+      <!--<artifactId>javaee-api</artifactId>-->
+      <!--<version>${javax.version}</version>-->
+      <!--<scope>provided</scope>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>junit</groupId>-->
+      <!--<artifactId>junit</artifactId>-->
+      <!--<version>${junit.version}</version>-->
+      <!--<scope>test</scope>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.mockito</groupId>-->
+      <!--<artifactId>mockito-core</artifactId>-->
+      <!--<version>${mockito.version}</version>-->
+        <!--<scope>test</scope>-->
+    <!--</dependency>-->
+
+
+
+    <!--<dependency>-->
+      <!--<groupId>org.glassfish.jersey.core</groupId>-->
+      <!--<artifactId>jersey-common</artifactId>-->
+      <!--<version>${glassfish.version}</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.glassfish.jersey.containers</groupId>-->
+      <!--<artifactId>jersey-container-servlet</artifactId>-->
+      <!--<version>${jersey_version}</version>-->
+    <!--</dependency>-->
+
+
+    <!--<dependency>-->
+      <!--<groupId>com.fasterxml.jackson.jaxrs</groupId>-->
+      <!--<artifactId>jackson-jaxrs-json-provider</artifactId>-->
+      <!--<version>2.8.9</version>-->
+    <!--</dependency>-->
+
+    <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+      <!--&lt;!&ndash;<groupId>org.glassfish.jersey.media</groupId>&ndash;&gt;-->
+      <!--&lt;!&ndash;<artifactId>jersey-media-json-jackson</artifactId>&ndash;&gt;-->
+      <!--&lt;!&ndash;<version>${jersey_version}</version>&ndash;&gt;-->
+    <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+      <!--&lt;!&ndash;<groupId>org.glassfish.jersey.ext</groupId>&ndash;&gt;-->
+      <!--&lt;!&ndash;<artifactId>jersey-bean-validation</artifactId>&ndash;&gt;-->
+      <!--&lt;!&ndash;<version>${jersey_version}</version>&ndash;&gt;-->
+    <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>org.hibernate</groupId>-->
+      <!--<artifactId>hibernate-validator</artifactId>-->
+      <!--<version>${hibernate-validator.version}</version>-->
+      <!--<scope>test</scope>-->
+    <!--</dependency>-->
+    <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+      <!--&lt;!&ndash;<groupId>org.glassfish</groupId>&ndash;&gt;-->
+      <!--&lt;!&ndash;<artifactId>javax.el</artifactId>&ndash;&gt;-->
+      <!--&lt;!&ndash;<version>${javax-el.version}</version>&ndash;&gt;-->
+      <!--&lt;!&ndash;<scope>test</scope>&ndash;&gt;-->
+    <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+    <!--<dependency>-->
+      <!--<groupId>org.postgresql</groupId>-->
+      <!--<artifactId>postgresql</artifactId>-->
+      <!--<version>${postgress.version}</version>-->
+    <!--</dependency>-->
+
+
+  <!--</dependencies>-->
+
+  <!--<build>-->
+    <!--<finalName>proiect1</finalName>-->
+    <!--<pluginManagement>&lt;!&ndash; lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) &ndash;&gt;-->
+      <!--<plugins>-->
+        <!--<plugin>-->
+          <!--<artifactId>maven-clean-plugin</artifactId>-->
+          <!--<version>3.0.0</version>-->
+        <!--</plugin>-->
+        <!--&lt;!&ndash; see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging &ndash;&gt;-->
+        <!--<plugin>-->
+          <!--<artifactId>maven-resources-plugin</artifactId>-->
+          <!--<version>3.0.2</version>-->
+        <!--</plugin>-->
+        <!--<plugin>-->
+          <!--<artifactId>maven-compiler-plugin</artifactId>-->
+          <!--<version>3.7.0</version>-->
+        <!--</plugin>-->
+        <!--<plugin>-->
+          <!--<artifactId>maven-surefire-plugin</artifactId>-->
+          <!--<version>2.20.1</version>-->
+        <!--</plugin>-->
+        <!--<plugin>-->
+          <!--<artifactId>maven-war-plugin</artifactId>-->
+          <!--<version>3.2.0</version>-->
+        <!--</plugin>-->
+        <!--<plugin>-->
+          <!--<artifactId>maven-install-plugin</artifactId>-->
+          <!--<version>2.5.2</version>-->
+        <!--</plugin>-->
+        <!--<plugin>-->
+          <!--<artifactId>maven-deploy-plugin</artifactId>-->
+          <!--<version>2.8.2</version>-->
+        <!--</plugin>-->
+      <!--</plugins>-->
+    <!--</pluginManagement>-->
+  <!--</build>-->
+<!--</project>-->

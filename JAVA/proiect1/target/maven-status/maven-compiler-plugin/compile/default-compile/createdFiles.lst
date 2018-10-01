@@ -1,5 +1,6 @@
 ro\nttdata\tutorial\admin\entity\Company.class
 ro\nttdata\tutorial\exceptions\ApplicationExceptionMapper.class
+ro\nttdata\tutorial\rest\ApplicationConfig.class
 ro\nttdata\tutorial\admin\entity\Person.class
 ro\nttdata\tutorial\admin\entity\Address.class
 ro\nttdata\tutorial\admin\boundary\AddressResource.class
