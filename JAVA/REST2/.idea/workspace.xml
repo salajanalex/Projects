@@ -3,33 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="de9c7e5d-a071-44cb-91a0-d97be023b1e0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/REST2.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/REST2.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/.idea/dataSources/cf9b0622-4fd2-40a5-86a1-bfd1b63bb040.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/.idea/dataSources/cf9b0622-4fd2-40a5-86a1-bfd1b63bb040.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/.idea/dataSources/cf9b0622-4fd2-40a5-86a1-bfd1b63bb040/storage_v2/_src_/database/projects.ehh5xA/schema/proiect1.twBrxA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/.idea/dataSources/cf9b0622-4fd2-40a5-86a1-bfd1b63bb040/storage_v2/_src_/database/projects.ehh5xA/schema/proiect1.twBrxA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/boundary/CompanyResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/boundary/CompanyResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/boundary/PersonResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/boundary/PersonResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/controller/PersonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/entity/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/entity/Company.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/java/ro/nttdata/tutorial/admin/entity/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/admin/boundary/CompanyResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/admin/boundary/CompanyResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/admin/boundary/PersonResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/admin/boundary/PersonResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/admin/controller/PersonControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/src/test/java/ro/nttdata/tutorial/admin/controller/PersonControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/boundary/CompanyResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/boundary/CompanyResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/boundary/PersonResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/boundary/PersonResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/controller/PersonController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/entity/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/entity/Address.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/entity/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/entity/Company.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/entity/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/classes/ro/nttdata/tutorial/admin/entity/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1.war" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/CompanyResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/CompanyResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/PersonResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/PersonResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/PersonController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Address.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Company.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/lib/jackson-annotations-2.8.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/lib/jackson-core-2.8.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/lib/jackson-databind-2.8.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/lib/jackson-module-jaxb-annotations-2.8.10.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/lib/javax.el-2.2.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/lib/javax.el-api-2.2.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/lib/jersey-bean-validation-2.27.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/lib/jersey-entity-filtering-2.27.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/lib/jersey-media-json-jackson-2.27.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/proiect1/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.boundary.AddressResourceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.boundary.AddressResourceTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.boundary.CompanyResourceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.boundary.CompanyResourceTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.boundary.PersonResourceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.boundary.PersonResourceTest.xml" afterDir="false" />
@@ -41,9 +37,17 @@
       <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.status.StatusResourceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/TEST-ro.nttdata.tutorial.status.StatusResourceTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.boundary.AddressResourceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.boundary.AddressResourceTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.boundary.CompanyResourceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.boundary.CompanyResourceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.boundary.PersonResourceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.boundary.PersonResourceTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.controller.AddressControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.controller.AddressControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.controller.PersonControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.admin.controller.PersonControllerTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.status.EchoValidationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.status.EchoValidationTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.status.PersonResourcetestNoAnnTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.status.PersonResourcetestNoAnnTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.status.StatusResourceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/surefire-reports/ro.nttdata.tutorial.status.StatusResourceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/admin/boundary/CompanyResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/admin/boundary/CompanyResourceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/admin/boundary/PersonResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/admin/boundary/PersonResourceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/admin/controller/PersonControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../proiect1/target/test-classes/ro/nttdata/tutorial/admin/controller/PersonControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JS/JavaScript30/05 - Flex Panel Gallery/index-START.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../JS/JavaScript30/05 - Flex Panel Gallery/index-START.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JS/JavaScript30/06 - Type Ahead/index-START.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../JS/JavaScript30/06 - Type Ahead/index-START.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -143,9 +147,11 @@
     <session id="-1900820073">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -170,16 +176,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6e5fbb5d-848f-423a-9ce5-3384956a6efd/console.sql">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -214,7 +220,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/jersey/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="1836">
               <caret line="118" column="4" selection-start-line="118" selection-start-column="4" selection-end-line="121" selection-end-column="41" />
             </state>
           </provider>
@@ -296,11 +302,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="2420" />
+    <option name="height" value="1320" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -310,6 +316,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -375,7 +382,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -483,18 +489,19 @@
       <workItem from="1537426632036" duration="146000" />
       <workItem from="1537874337315" duration="2784000" />
       <workItem from="1537942280961" duration="3845000" />
+      <workItem from="1538551135475" duration="603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13660000" />
+    <option name="totallyTimeSpent" value="14263000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49796748" visible="true" weight="0.2489339" />
-      <window_info id="Structure" order="1" sideWeight="0.5020325" side_tool="true" visible="true" weight="0.2489339" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967462" visible="true" weight="0.25159913" />
+      <window_info id="Structure" order="1" sideWeight="0.5032538" side_tool="true" visible="true" weight="0.25159913" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Persistence" order="3" side_tool="true" />
       <window_info id="Designer" order="4" />
@@ -502,7 +509,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.46637744" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.46637744" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -538,13 +545,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6e5fbb5d-848f-423a-9ce5-3384956a6efd/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="61" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-bundle/1.9.1/jersey-bundle-1.9.1.jar!/com/sun/jersey/spi/container/servlet/ServletContainer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/jersey/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="118" column="4" selection-start-line="118" selection-start-column="4" selection-end-line="121" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -582,33 +614,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/jersey/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="118" column="4" selection-start-line="118" selection-start-column="4" selection-end-line="121" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="61" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-bundle/1.9.1/jersey-bundle-1.9.1.jar!/com/sun/jersey/spi/container/servlet/ServletContainer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6e5fbb5d-848f-423a-9ce5-3384956a6efd/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

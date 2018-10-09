@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="104e7c71-6507-472f-9bef-d7d882a83bae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../REST2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../REST2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf9b0622-4fd2-40a5-86a1-bfd1b63bb040.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cf9b0622-4fd2-40a5-86a1-bfd1b63bb040.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf9b0622-4fd2-40a5-86a1-bfd1b63bb040/storage_v2/_src_/database/projects.ehh5xA/schema/proiect1.twBrxA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cf9b0622-4fd2-40a5-86a1-bfd1b63bb040/storage_v2/_src_/database/projects.ehh5xA/schema/proiect1.twBrxA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/AddressResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/AddressResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/CompanyResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/CompanyResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/PersonResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/PersonResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/AddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/boundary/CompanyResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/boundary/CompanyResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/boundary/PersonResourceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/boundary/PersonResourceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/controller/CompanyControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/controller/CompanyControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/controller/PersonControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/controller/PersonControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/boundary/AddressResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/boundary/AddressResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/boundary/CompanyResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/boundary/CompanyResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/boundary/PersonResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/boundary/PersonResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/controller/AddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/controller/AddressController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/controller/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/controller/CompanyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/controller/PersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/entity/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/entity/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/entity/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/entity/Company.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/entity/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ro/nttdata/tutorial/admin/entity/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proiect1.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/proiect1.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/AddressResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/AddressResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/CompanyResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/CompanyResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/PersonResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/boundary/PersonResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/AddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/AddressController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/CompanyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/controller/PersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Company.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/proiect1/WEB-INF/classes/ro/nttdata/tutorial/admin/entity/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.boundary.AddressResourceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.boundary.AddressResourceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.boundary.CompanyResourceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.boundary.CompanyResourceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.boundary.PersonResourceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.boundary.PersonResourceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.controller.AddressControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.controller.AddressControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.controller.CompanyControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.controller.CompanyControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.controller.PersonControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.admin.controller.PersonControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.status.EchoValidationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.status.EchoValidationTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.status.PersonResourcetestNoAnnTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.status.PersonResourcetestNoAnnTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.status.StatusResourceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ro.nttdata.tutorial.status.StatusResourceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.admin.boundary.AddressResourceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.admin.boundary.AddressResourceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.admin.boundary.CompanyResourceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.admin.boundary.CompanyResourceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.admin.boundary.PersonResourceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.admin.boundary.PersonResourceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.admin.controller.AddressControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.admin.controller.AddressControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.admin.controller.CompanyControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.admin.controller.CompanyControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.admin.controller.PersonControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.admin.controller.PersonControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.status.EchoValidationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.status.EchoValidationTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.status.PersonResourcetestNoAnnTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ro.nttdata.tutorial.status.PersonResourcetestNoAnnTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ro/nttdata/tutorial/admin/boundary/CompanyResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ro/nttdata/tutorial/admin/boundary/CompanyResourceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ro/nttdata/tutorial/admin/boundary/PersonResourceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ro/nttdata/tutorial/admin/boundary/PersonResourceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ro/nttdata/tutorial/admin/controller/CompanyControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ro/nttdata/tutorial/admin/controller/CompanyControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ro/nttdata/tutorial/admin/controller/PersonControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ro/nttdata/tutorial/admin/controller/PersonControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JS/JavaScript30/05 - Flex Panel Gallery/index-START.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../JS/JavaScript30/05 - Flex Panel Gallery/index-START.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JS/JavaScript30/06 - Type Ahead/index-START.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../JS/JavaScript30/06 - Type Ahead/index-START.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/proiect1$All_in_proiect1.ic" NAME="All in proiect1 Coverage Results" MODIFIED="1536649623255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/proiect1$ro_nttdata_tutorial_in_proiect1.ic" NAME="ro.nttdata.tutorial in proiect1 Coverage Results" MODIFIED="1538654162072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ro.nttdata.tutorial.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="173" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="projects@localhost [2]" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="498021226">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="69" />
+          <entry key="java" value="7381" />
+          <entry key="txt" value="13" />
+          <entry key="xml" value="481" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="7381" />
+          <entry key="PLAIN_TEXT" value="82" />
+          <entry key="XML" value="481" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="17" />
+          <entry key="java" value="64" />
+          <entry key="jsp" value="2" />
+          <entry key="xml" value="8" />
+          <entry key="xsl" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="17" />
+          <entry key="JAVA" value="64" />
+          <entry key="JSP" value="2" />
+          <entry key="XML" value="9" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1627025165">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="23" />
+          <entry key="sql" value="1" />
+          <entry key="xml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="23" />
+          <entry key="Scratch" value="1" />
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="2258" />
+          <entry key="txt" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="2258" />
+          <entry key="PLAIN_TEXT" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+    </session>
+    <session id="8111337">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="address" value="5" />
+          <entry key="class" value="48" />
+          <entry key="company" value="11" />
+          <entry key="java" value="253" />
+          <entry key="person" value="11" />
+          <entry key="postgres" value="1" />
+          <entry key="sql" value="3" />
+          <entry key="xml" value="24" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="48" />
+          <entry key="Database Element" value="27" />
+          <entry key="JAVA" value="253" />
+          <entry key="SQL" value="1" />
+          <entry key="Scratch" value="3" />
+          <entry key="XML" value="24" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="18510" />
+          <entry key="PLAIN_TEXT" value="35" />
+          <entry key="Scratch" value="97" />
+          <entry key="XML" value="311" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cell" value="97" />
+          <entry key="dummy" value="9" />
+          <entry key="java" value="18510" />
+          <entry key="txt" value="26" />
+          <entry key="xml" value="311" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/PersonResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="135" column="70" lean-forward="true" selection-start-line="135" selection-start-column="70" selection-end-line="135" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Company.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/CompanyResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="114" column="44" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="XSLT Stylesheet" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>silent</find>
+      <find>Response</find>
+      <find>merge</find>
+      <find>response</find>
+      <find>jms</find>
+      <find>web.xml</find>
+      <find>tutorial</find>
+      <find>adres</find>
+      <find>query</find>
+      <find>jersey_ver</find>
+      <find>javaee</find>
+      <find>2.2</find>
+      <find>core</find>
+      <find>common</find>
+      <find>jersey-comm</find>
+      <find>glass</find>
+      <find>jackson</find>
+      <find>jersey</find>
+      <find>xml</find>
+      <find>DELETE</find>
+      <find>delete</find>
+      <find>captor</find>
+      <find>any(Class</find>
+      <find>Company.findAll</find>
+      <find>persist</find>
+      <find>Company.delete</find>
+      <find>FOReACH</find>
+      <find>fullname</find>
+      <find>ResponseB</find>
+      <find>@Inject</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Person</replace>
+      <replace>person</replace>
+      <replace>address</replace>
+      <replace>Company</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/status/boundary/boundary/OutofBoundsException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/status/boundary/boundary/OutOfBoundsException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/status/boundary/boundary/ApplicationExceptionMapper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/StatusResourceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/status/boundary/boundary/RunValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/status/boundary/boundary/Text.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/status/boundary/StatusResourceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/status/boundary/boundary/ValidationExceptionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/status/boundary/boundary/StatusResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/status/boundary/boundary/entity/Adress.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/status/boundary/boundary/entity/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/status/boundary/entity/Adress.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/admin/control/Adress.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/Adress.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/status/boundary/EchoValidationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/exceptions/ValidationExceptionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Adress.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/status/boundery/StatusResource.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/status/PersonResourcetestNoAnnTest.java" />
+        <option value="$PROJECT_DIR$/src/META-IN/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/status/controllers/CompanyControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/consumer/producer/boundary/TimerProducer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/status/PersonResourceTest2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/AddressResourde.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/status/PersonResourceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/consumer/boundary/Consumer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/boundary/AddressResourceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/rest/RestConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/glassfish-web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/orm.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/rest/ApplicationConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Address.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/controller/AddressControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/controller/PersonControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/boundary/PersonResourceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/controller/CompanyControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/PersonController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/AddressResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/PersonResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/AddressController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Company.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/CompanyController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/boundary/CompanyResourceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/CompanyResource.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="proiect1 Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="2420" />
+    <option name="height" value="1320" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="boundary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="rest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="boundary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proiect1" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proiect1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537189690079" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../REST2" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ro.nttdata.tutorial.admin.boundary" />
+      <recent name="ro.nttdata.tutorial.admin.controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alex.salajan\PROJECTS\JAVA\proiect1\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ro.nttdata.tutorial" />
+      <recent name="ro.nttdata.tutorial.admin.boundary" />
+      <recent name="ro.nttdata.tutorial.admin.controller" />
+      <recent name="ro.nttdata.tutorial.status.boundary" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ronttdata.producer" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Maven.maven">
+    <configuration name="CompanyControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proiect1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ro.nttdata.tutorial.admin.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ro.nttdata.tutorial.admin.controller" />
+      <option name="MAIN_CLASS_NAME" value="ro.nttdata.tutorial.admin.controller.CompanyControllerTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompanyControllerTest.testDeleteCompany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proiect1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ro.nttdata.tutorial.admin.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ro.nttdata.tutorial.admin.controller" />
+      <option name="MAIN_CLASS_NAME" value="ro.nttdata.tutorial.admin.controller.CompanyControllerTest" />
+      <option name="METHOD_NAME" value="testDeleteCompany" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompanyResourceTest.testDeleteCompany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proiect1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ro.nttdata.tutorial.admin.boundary.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ro.nttdata.tutorial.admin.boundary" />
+      <option name="MAIN_CLASS_NAME" value="ro.nttdata.tutorial.admin.boundary.CompanyResourceTest" />
+      <option name="METHOD_NAME" value="testDeleteCompany" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ro.nttdata.tutorial in proiect1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proiect1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ro.nttdata.tutorial.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ro.nttdata.tutorial" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ro.nttdata.tutorial.admin in proiect1" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="proiect1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ro.nttdata.tutorial.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ro.nttdata.tutorial.admin" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="maven" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="startsonar" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="sonar:sonar" />
+                <option value="-Dsonar.host.url=http://localhost:9000" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.ro.nttdata.tutorial.admin in proiect1" />
+      <item itemvalue="Maven.maven" />
+      <item itemvalue="Maven.startsonar" />
+      <item itemvalue="JUnit.CompanyControllerTest" />
+      <item itemvalue="JUnit.CompanyResourceTest.testDeleteCompany" />
+      <item itemvalue="JUnit.ro.nttdata.tutorial in proiect1" />
+      <item itemvalue="JUnit.CompanyControllerTest.testDeleteCompany" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ro.nttdata.tutorial in proiect1" />
+        <item itemvalue="JUnit.CompanyResourceTest.testDeleteCompany" />
+        <item itemvalue="JUnit.CompanyControllerTest.testDeleteCompany" />
+        <item itemvalue="JUnit.CompanyControllerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="104e7c71-6507-472f-9bef-d7d882a83bae" name="Default Changelist" comment="" />
+      <created>1536135756374</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1536135756374</updated>
+      <workItem from="1537252378512" duration="26443000" />
+      <workItem from="1537427341902" duration="609000" />
+      <workItem from="1537431410869" duration="16385000" />
+      <workItem from="1537786340353" duration="38893000" />
+      <workItem from="1537942271681" duration="63604000" />
+      <workItem from="1538551136838" duration="53760000" />
+      <workItem from="1538986324491" duration="17706000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ro_nttdata_tutorial_in_proiect1 - 2018.10.09 at 11h 04m 56s.xml">
+      <configuration name="ro.nttdata.tutorial in proiect1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ro_nttdata_tutorial_in_proiect1 - 2018.10.09 at 11h 05m 43s.xml">
+      <configuration name="ro.nttdata.tutorial in proiect1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyResourceTest_testDeleteCompany - 2018.10.09 at 11h 06m 04s.xml">
+      <configuration name="CompanyResourceTest.testDeleteCompany" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CompanyResourceTest_testDeleteCompany - 2018.10.09 at 11h 09m 39s.xml">
+      <configuration name="CompanyResourceTest.testDeleteCompany" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ro_nttdata_tutorial_admin_in_proiect1 - 2018.10.09 at 11h 51m 49s.xml">
+      <configuration name="ro.nttdata.tutorial.admin in proiect1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ro_nttdata_tutorial_admin_in_proiect1 - 2018.10.09 at 11h 51m 57s.xml">
+      <configuration name="ro.nttdata.tutorial.admin in proiect1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ro_nttdata_tutorial_in_proiect1 - 2018.10.09 at 11h 52m 06s.xml">
+      <configuration name="ro.nttdata.tutorial in proiect1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ro_nttdata_tutorial_admin_in_proiect1 - 2018.10.09 at 11h 52m 14s.xml">
+      <configuration name="ro.nttdata.tutorial.admin in proiect1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ro_nttdata_tutorial_in_proiect1 - 2018.10.09 at 11h 52m 33s.xml">
+      <configuration name="ro.nttdata.tutorial in proiect1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ro_nttdata_tutorial_in_proiect1 - 2018.10.09 at 11h 59m 11s.xml">
+      <configuration name="ro.nttdata.tutorial in proiect1" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="217400000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Web" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49871466" visible="true" weight="0.16791044" />
+      <window_info id="Structure" order="2" sideWeight="0.5012854" side_tool="true" weight="0.19402985" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="0" />
+      <window_info anchor="bottom" id="Java Enterprise" order="1" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.23318872" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.4978678" visible="true" weight="0.27548808" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49733475" weight="0.29067245" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021322" side_tool="true" weight="0.28850326" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286334" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49840087" weight="0.30911064" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
+      <window_info anchor="right" id="Database" order="0" sideWeight="0.49911505" visible="true" weight="0.07409382" />
+      <window_info anchor="right" id="CDI" order="1" />
+      <window_info anchor="right" id="Bean Validation" order="2" />
+      <window_info anchor="right" id="JSF" order="3" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="5" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Maven Projects" order="11" weight="0.32995737" />
+      <window_info anchor="right" id="Coverage" order="12" sideWeight="0.50088495" side_tool="true" visible="true" weight="0.20309168" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>((ContainerException)re)</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>org.glassfish.jersey.server.ContainerException</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((ContainerException)re).printStackTrace();</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>org.glassfish.jersey.server.ContainerException</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>var3</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>resul</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>task</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>query.getResultList()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>companyResource.getAllCompanies().getEntity()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>response.getEntity()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-common/2.22.2/jersey-common-2.22.2.jar!/org/glassfish/jersey/process/internal/RequestScope.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="279" selection-start-line="279" selection-end-line="279" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/containers/jersey-container-servlet-core/2.27/jersey-container-servlet-core-2.27.jar!/org/glassfish/jersey/servlet/internal/ResponseWriter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.27/jersey-server-2.27.jar!/org/glassfish/jersey/server/ServerRuntime.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-common/2.22.2/jersey-common-2.22.2.jar!/org/glassfish/jersey/internal/Errors.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/8.0/javaee-api-8.0.jar!/javax/persistence/ManyToOne.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-common/2.22.2/jersey-common-2.22.2.jar!/org/glassfish/jersey/ExtendedConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.27/jersey-server-2.27.jar!/org/glassfish/jersey/server/ResourceConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-common/2.22.4/jersey-common-2.22.4.jar!/org/glassfish/jersey/ExtendedConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.22.4/jersey-server-2.22.4.jar!/org/glassfish/jersey/server/ResourceConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/rest/ApplicationConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cf9b0622-4fd2-40a5-86a1-bfd1b63bb040/database/projects/schema/proiect1/table/person" />
+    <entry file="das://cf9b0622-4fd2-40a5-86a1-bfd1b63bb040/database/projects/schema/proiect1/table/address" />
+    <entry file="das://cf9b0622-4fd2-40a5-86a1-bfd1b63bb040/database/projects/schema/proiect1/table/company" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.7.13/mockito-core-2.7.13.jar!/org/mockito/ArgumentCaptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/8.0/javaee-api-8.0.jar!/javax/persistence/Query.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/8.0/javaee-api-8.0.jar!/javax/persistence/EntityManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="74" column="14" lean-forward="true" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/status/EchoValidationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/boundary/PersonResourceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="857">
+          <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/controller/AddressControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/controller/PersonControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/controller/CompanyControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="56" column="40" lean-forward="true" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/AddressResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/AddressController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#857#858#0" expanded="true" />
+            <element signature="e#917#918#0" expanded="true" />
+            <element signature="e#1268#1269#0" expanded="true" />
+            <element signature="e#1312#1313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/PersonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#967#968#0" expanded="true" />
+            <element signature="e#1522#1523#0" expanded="true" />
+            <element signature="e#1565#1566#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="81" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/controller/CompanyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#1865#1866#0" expanded="true" />
+            <element signature="e#1909#1910#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ro/nttdata/tutorial/admin/boundary/CompanyResourceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/PersonResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="135" column="70" lean-forward="true" selection-start-line="135" selection-start-column="70" selection-end-line="135" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/entity/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/nttdata/tutorial/admin/boundary/CompanyResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="114" column="44" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>proiect1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.sun.mail:javax.mail:1.6.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
