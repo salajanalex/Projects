@@ -4,11 +4,14 @@ import ro.nttdata.tutorial.admin.controller.AddressController;
 import ro.nttdata.tutorial.admin.controller.PersonController;
 import ro.nttdata.tutorial.admin.entity.Address;
 import ro.nttdata.tutorial.admin.entity.Person;
+import ro.nttdata.tutorial.admin.entity.PersonAddressDTO;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.ArrayList;
 import java.util.List;
 
 @Path("/person")
@@ -17,14 +20,12 @@ public class PersonResource {
     @Inject
     private PersonController controller;
 
-//    @Inject
-//    private PersonController personController;
-
     @Inject
     private AddressController addressController;
 
     /**
      * Returns all Persons as a JSON Response
+     *
      * @return
      */
     @GET
@@ -37,6 +38,7 @@ public class PersonResource {
 
     /**
      * Returns a Person with a given ID
+     *
      * @param id
      * @return
      */
@@ -53,28 +55,59 @@ public class PersonResource {
     /**
      * It should work for person without address and person with address
      * Adds new Person
-     * @param person
-     * @return
+     *
+     * @param personAndAddress
+     * @return Returns a "Transaction marked for rollback." message if person already exists in DB
      */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/new")
-    public Response addNewPerson(Person person) {
-        List<Person> personList = controller.getAllPersons();
-        for (Person person1 : personList) {
-            if (person1.getFullName().equals(person.getFullName())) {
-                return Response.ok("Unable to create new person, person with given name already exists").build();
+    public Response addNewPerson(PersonAddressDTO personAndAddress) throws Exception {
+        boolean addressExists = false;
+        Person person = personAndAddress.getPerson();
+        Address address = personAndAddress.getAddress();
+        controller.addPerson(person);
+        /**
+         * We add only the person withoud an address
+         */
+        if (address == null) {
+            Response.ResponseBuilder builder = Response.ok(personAndAddress);
+            return builder.build();
+        }
+        /**
+         * checking if address exists or not. If yes, setting it.
+         */
+        List<Address> addressList = addressController.getAllAddresses();
+        for (Address eachAddress : addressList) {
+            if ((eachAddress.getNumber() == address.getNumber()) && eachAddress.getStreet().equals(address.getStreet())
+                    && eachAddress.getCity().equals(address.getCity())) {
+                address = eachAddress;
+                addressExists = true;
+                break;
             }
         }
-//        Address address = person.getAddress();
-        controller.addPerson(person);
-        Response.ResponseBuilder builder = Response.ok(person);
+        if (addressExists) {
+            person.setAddress(address);
+            address.addPrsonToAddress(person);
+            addressController.updateAddress(address);
+            Response.ResponseBuilder builder = Response.ok(personAndAddress);
+            return builder.build();
+        }
+        person.setAddress(address);
+        List<Person> personList = new ArrayList<>();
+        personList.add(person);
+        address.setPersonList(personList);
+        addressController.addAddress(address);
+        addressController.updateAddress(address);
+        Response.ResponseBuilder builder = Response.ok(personAndAddress);
         return builder.build();
     }
 
+
     /**
      * Updates a Person
+     *
      * @param person
      * @return
      */
@@ -82,7 +115,7 @@ public class PersonResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/update")
-    public Response updatePerson(Person person) {
+    public Response updatePerson(@Valid Person person) {
         Person existingPerson = controller.getPersonById(person.getIdperson());
         Address existingAddress = existingPerson.getAddress();
         Address newAddress = person.getAddress();
@@ -100,6 +133,7 @@ public class PersonResource {
 
     /**
      * Updates the address of a person with givena ID
+     *
      * @param id
      * @param address
      * @return
@@ -108,14 +142,16 @@ public class PersonResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{id}/updateaddress")
-    public Response updateAddressOfPerson(@PathParam("id") int id, Address address) {
+    public Response updateAddressOfPerson(@PathParam("id") int id, @Valid Address address) {
         Person person = controller.getPersonById(id);
         Address addressToUpdate = person.getAddress();
         addressToUpdate.setCountry(address.getCountry());
         addressToUpdate.setCity(address.getCity());
         addressToUpdate.setNumber(address.getNumber());
         addressToUpdate.setStreet(address.getStreet());
-        addressToUpdate.setPerson(person);
+        List<Person> personList = address.getPersonList();
+        personList.add(person);
+        addressToUpdate.setPersonList(personList);
         person.setAddress(addressToUpdate);
 
         controller.updatePerson(person);
@@ -125,6 +161,7 @@ public class PersonResource {
 
     /**
      * Removes a Person By ID
+     *
      * @param id
      * @return
      */
@@ -138,6 +175,7 @@ public class PersonResource {
 
     /**
      * Remove Person from company by ID
+     *
      * @param id
      * @return
      */
@@ -147,7 +185,7 @@ public class PersonResource {
     @Path("/fire/{id}")
     public Response removeFromCompany(@PathParam("id") int id) {
         Person person = controller.getPersonById(id);
-        if (person != null){
+        if (person != null) {
             person.setCompany(null);
             controller.updatePerson(person);
             return Response.ok(person).build();

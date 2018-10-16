@@ -4,13 +4,11 @@
 package ro.nttdata.tutorial.admin.controller;
 
 import ro.nttdata.tutorial.admin.entity.Company;
-import ro.nttdata.tutorial.admin.entity.Person;
 
 import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import javax.ws.rs.PathParam;
 import java.util.List;
 
 
@@ -22,6 +20,7 @@ public class CompanyController {
 
     /**
      * Adding new Company with the persist method.
+     *
      * @param company
      */
     public void addCompany(Company company) {
@@ -30,6 +29,7 @@ public class CompanyController {
 
     /**
      * Deleting by id an existing company
+     *
      * @param id
      */
     public void deleteCompany(int id) {
@@ -38,14 +38,9 @@ public class CompanyController {
         query.executeUpdate();
     }
 
-    public void deleteCompany2(Company company) {
-        entityManager.merge(company);
-        entityManager.detach(company);
-        entityManager.remove(company);
-    }
-
     /**
      * Finding and returning of a company by ID
+     *
      * @param id
      * @return Company
      */
@@ -55,6 +50,7 @@ public class CompanyController {
 
     /**
      * Finding and returning all companies
+     *
      * @return
      * @throws Exception
      */
@@ -69,6 +65,7 @@ public class CompanyController {
 
     /**
      * updating an existing company. Id must be given in the JSON.
+     *
      * @param company
      */
     public void updateCompany(Company company) {

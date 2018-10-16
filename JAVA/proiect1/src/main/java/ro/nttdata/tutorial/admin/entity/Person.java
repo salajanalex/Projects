@@ -1,41 +1,72 @@
 package ro.nttdata.tutorial.admin.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.eclipse.persistence.config.HintValues;
+import org.eclipse.persistence.config.QueryHints;
 import org.eclipse.persistence.oxm.annotations.XmlInverseReference;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 
 @Entity
 //@Table(name = "person", schema = "proiect1")
+@NamedQueries({
+        @NamedQuery(name = Person.SELECT_PERSONS_QUERY, query = "SELECT p FROM Person as p",
+                hints = {@QueryHint(name = QueryHints.REFRESH, value = HintValues.TRUE)}),
+        @NamedQuery(name = Person.DELETE_PERSON_QUERY, query = "DELETE from Person p WHERE p.idperson = :id")
+})
 public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idperson;
+
+    @Size(min = 2, max = 100, message = "name length must be between 2 and 100 characters")
+    @NotEmpty(message = "name cannot be null")
     private String name;
+
+    @Size(min = 2, max = 100, message = "surname length must be between 2 and 100 characters")
     private String surname;
+
+    @Min(value = 16, message = "Age should not be less than 16")
+    @Max(value = 150, message = "Age should not be greater than 150")
     private int age;
+
+
     @Transient
     private String fullName;
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idcompany", nullable = true)
+    @JoinColumn(name = "idcompany")
     @JsonIgnore    // pt varianta de Jersey (Marshall)
     @XmlInverseReference(mappedBy = "person")   // pt varianta de moxy (Unmarshall)
     public Company company;
 
-    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL,  //in mappedBy -> numele campului de care depinde.
-            fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idaddress")
+    @JsonIgnore
+    @XmlInverseReference(mappedBy = "person")
+//    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL,  //in mappedBy -> numele campului de care depinde.
+//            fetch = FetchType.LAZY, optional = false)
     private Address address;
 
-    public final static String DELETE_PERSON_QUERY = "DELETE FROM Person p WHERE p.idperson = :id";
-    public static final String SELECT_PERSONS_QUERY = "SELECT p FROM Person as p";
+
+    public final static String DELETE_PERSON_QUERY = "Person.delete";
+    public final static String SELECT_PERSONS_QUERY = "Person.findAll";
 
     public Person() {
     }
 
     public Person(int idPerson, String name, String surname, int age) {
         this.idperson = idPerson;
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+    }
+
+    public Person(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -75,10 +106,6 @@ public class Person {
 
     public String getFullName() {
         return this.name + " " + this.surname;
-    }
-
-    public void setFullName(String name, String surname) {
-        this.fullName = name + " " + surname;
     }
 
     public Company getCompany() {

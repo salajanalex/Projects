@@ -114,7 +114,7 @@ public class CompanyControllerTest {
         TypedQuery query = mock(TypedQuery.class);
         when(entityManager.createNamedQuery(anyString(), any(Class.class))).thenReturn(query);
         when(query.getResultList()).thenReturn(compList);
-        final List<Company> controllerCompanies = companyController.getAllCompanies();
+        companyController.getAllCompanies();
     }
 
     @Test

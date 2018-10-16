@@ -1,14 +1,19 @@
 package ro.nttdata.tutorial.admin.boundary;
 
+import ro.nttdata.tutorial.admin.controller.AddressController;
 import ro.nttdata.tutorial.admin.controller.CompanyController;
 import ro.nttdata.tutorial.admin.controller.PersonController;
+import ro.nttdata.tutorial.admin.entity.Address;
 import ro.nttdata.tutorial.admin.entity.Company;
 import ro.nttdata.tutorial.admin.entity.Person;
+import ro.nttdata.tutorial.admin.entity.PersonAddressDTO;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -19,6 +24,8 @@ public class CompanyResource {
     private CompanyController controller;
     @Inject
     private PersonController personController;
+    @Inject
+    private AddressController addressController;
 
     /**
      * Returning all companies as a JSON Response
@@ -60,13 +67,7 @@ public class CompanyResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/new")
-    public Response addNewCompany(Company company) throws Exception {
-        List<Company> companyList = controller.getAllCompanies();
-        for (Company comp : companyList) {
-            if (comp.getName().equals(company.getName())){
-                return Response.ok("Company Already Exists").build();
-            }
-        }
+    public Response addNewCompany(@Valid Company company) throws Exception {
         controller.addCompany(company);
         Response.ResponseBuilder builder = Response.ok(company);
         return builder.build();
@@ -82,7 +83,7 @@ public class CompanyResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/update")
-    public Response updateCompany(Company company) {
+    public Response updateCompany(@Valid Company company) {
         Company oldCompany = controller.getCompanyById(company.getIdcompany());
         List<Person> personList = oldCompany.getPersonList();
         company.setPersonList(personList);
@@ -92,7 +93,6 @@ public class CompanyResource {
 
     /**
      * Deleting existing company by id
-     *
      * @param id
      * @return
      */
@@ -100,28 +100,7 @@ public class CompanyResource {
     @Path("/delete/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response deleteCompany(@PathParam("id") int id) {
-        Company company = controller.getCompanyById(id);
-        if (company == null) {
-            return Response.ok("Company does not exist").build();
-        }
-        for (Person person : company.getPersonList()) {
-            if (person.getCompany().getIdcompany() == id) {
-                person.setCompany(null);
-                personController.updatePerson(person);
-            }
-        }
-
         controller.deleteCompany(id);
-        return Response.ok("Company with id = " + id + " deleted").build();
-    }
-
-
-    @DELETE
-    @Path("/delete2/{id}")
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response deleteCompany2(@PathParam("id") int id) {
-        Company company = controller.getCompanyById(id);
-        controller.deleteCompany2(company);
         return Response.ok("Company with id= " + id + " deleted").build();
     }
 
@@ -155,33 +134,64 @@ public class CompanyResource {
     /**
      * Creating a new person and adding it to an existing company
      *
-     * @param idCompany
-     * @param person
+     * @param
      * @return
      */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{idCompany}/addnewperson")
-    public Response addNewPersonToCompany(@PathParam("idCompany") int idCompany, Person person) {
-        List<Person> personList = personController.getAllPersons();
-        for (Person person1 : personList) {
-            if (person1.getFullName().equals(person.getFullName())) {
-                return Response.ok("Unable to create new person, person with given name already exists").build();
-            }
-        }
+    public Response addNewPersonToCompany(@PathParam("idCompany") int idCompany, @Valid PersonAddressDTO personAddressDTO) throws Exception {
+        final Person person = personAddressDTO.getPerson();
+        Address address = personAddressDTO.getAddress();
         Company company = controller.getCompanyById(idCompany);
-        if (company != null) {
+        boolean addressExists = false;
+        if (person == null) {
+            return Response.status(404).entity("Invalid person body, person appears to be null").build();
+        }
+        if (company == null) {
+            return Response.status(404).entity("Company with if = " + idCompany + " not found").build();
+        }
+        if (address == null) {
             person.setCompany(company);
             personController.addPerson(person);
             controller.updateCompany(company);
             company = controller.getCompanyById(company.getIdcompany());
             Response.ResponseBuilder builder = Response.ok(company);
             return builder.build();
-        } else {
-            Response.ResponseBuilder builder = Response.ok("Person could not be created because Company not found");
+        }
+        //if address != null
+        List<Address> addressList = addressController.getAllAddresses();
+        for (Address eachAddress : addressList) {
+            if ((eachAddress.getNumber() == address.getNumber()) && eachAddress.getStreet().equals(address.getStreet())
+                    && eachAddress.getCity().equals(address.getCity())) {
+                address = eachAddress;
+                addressExists = true;
+                break;
+            }
+        }
+        if (addressExists) {
+            person.setCompany(company);
+            personController.addPerson(person);
+            controller.updateCompany(company);
+            person.setAddress(address);
+            address.addPrsonToAddress(person);
+            addressController.updateAddress(address);
+            Response.ResponseBuilder builder = Response.ok(personAddressDTO);
             return builder.build();
         }
+        // else = if addressExists = false
+        person.setCompany(company);
+        personController.addPerson(person);
+        controller.updateCompany(company);
+        person.setAddress(address);
+        List<Person> personList = new ArrayList<>();
+        personList.add(person);
+        address.setPersonList(personList);
+        addressController.addAddress(address);
+        addressController.updateAddress(address);
+        Response.ResponseBuilder builder = Response.ok(personAddressDTO);
+        return builder.build();
     }
 
 }

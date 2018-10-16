@@ -37,21 +37,53 @@ public class AddressResourceTest {
     }
 
     @Test
-    public void testAddNewAddress() {
+    public void testAddNewAddress() throws Exception {
         Assert.assertThat(addressResource.addNewAddress(address).getEntity().toString(),
                 containsString(Integer.toString(address.getIdaddress())));
     }
 
     @Test
-    public void testUpdateAddress() {
+    public void testUpdateAddressOfPerson() {
         Person person = new Person();
         when(personController.getPersonById(anyInt())).thenReturn(person);
-        Assert.assertThat(addressResource.updateAddress(anyInt(),address).getEntity().toString(),
+        final Response response = addressResource.updateAddressOfPerson(anyInt(), address);
+        Assert.assertThat(response.getEntity().toString(),
                 containsString(Integer.toString(address.getIdaddress())));
     }
 
     @Test
-    public void testDeleteAddress() {
+    public void testUpdateNullAddressOfPerson() {
+        Person person = null;
+        when(personController.getPersonById(anyInt())).thenReturn(person);
+        final Response response = addressResource.updateAddressOfPerson(anyInt(), address);
+        Assert.assertThat(response.getEntity().toString(),
+                containsString("person with given id not found"));
+    }
+
+    /**
+     * Test for Address with existing address to update
+     */
+    @Test
+    public void testUpdateAddress() {
+        when(addressController.getAddressById(anyInt())).thenReturn(address);
+        final Response response = addressResource.updateAddress(address);
+        Assert.assertThat(response.getEntity().toString(),
+                containsString(Integer.toString(address.getIdaddress())));
+    }
+
+    /**
+     * test for UpdateAddress with wrong idAddress. Address to update not found (null)
+     */
+    @Test
+    public void testUpdateAddressNotFound() {
+        when(addressController.getAddressById(anyInt())).thenReturn(null);
+        final Response response = addressResource.updateAddress(address);
+        Assert.assertEquals(response.getStatus(), Response.Status.NOT_FOUND.getStatusCode());
+    }
+
+    @Test
+    public void testDeleteAddress() throws Exception {
+
         Assert.assertThat(addressResource.deleteAddress(address.getIdaddress()).getEntity().toString(),
                 containsString(Integer.toString(address.getIdaddress())));
     }
@@ -65,10 +97,66 @@ public class AddressResourceTest {
     }
 
     @Test
-    public void testGetAllAddresses() {
+    public void testGetAllAddresses() throws Exception {
         final List<Address> addressList = new ArrayList<>();
         when(addressController.getAllAddresses()).thenReturn(addressList);
         Response response = addressResource.getAllAddresss();
         Assert.assertEquals(response.getEntity(), addressList);
     }
+
+    @Test
+    public void testAddExistingPersonToAddress() {
+        final Person person = new Person();
+        when(addressController.getAddressById(anyInt())).thenReturn(address);
+        when(personController.getPersonById(anyInt())).thenReturn(person);
+        final Response response = addressResource.addExistingPersonToAddress(address.getIdaddress(), person.getIdperson());
+        Assert.assertEquals(response.getEntity().toString(), address.toString());
+    }
+
+    @Test
+    public void testAddNullPersonToAddress() {
+        final Person person = new Person();
+        final Address address1 = null;
+        when(addressController.getAddressById(anyInt())).thenReturn(address1);
+        when(personController.getPersonById(anyInt())).thenReturn(person);
+        final Response response = addressResource.addExistingPersonToAddress(address.getIdaddress(), person.getIdperson());
+        Assert.assertEquals(response.getEntity().toString(), "Unsuccessfully, Person or Addres with given id do not exist");
+    }
+
+    @Test
+    public void testAddNewPersonToAddress() {
+        final Person person = new Person();
+        final List<Person> personList = new ArrayList<>();
+        when(personController.getAllPersons()).thenReturn(personList);
+        when(addressController.getAddressById(anyInt())).thenReturn(address);
+        final Response response = addressResource.addNewPersonToAddress(1, person);
+        Assert.assertEquals(response.getEntity().toString(), address.toString());
+    }
+
+    @Test
+    public void testAddNewPersonToNullAddress() {
+        final Address address1 = null;
+        final Person person = new Person();
+        final List<Person> personList = new ArrayList<>();
+        when(personController.getAllPersons()).thenReturn(personList);
+        when(addressController.getAddressById(anyInt())).thenReturn(address1);
+        final Response response = addressResource.addNewPersonToAddress(1, person);
+        Assert.assertEquals(response.getEntity().toString(), "Person could not be created because Address not found");
+    }
+
+    /**
+     * person exists so new one cant be created
+     */
+    @Test
+    public void testAddNewPersonExistingToAddress() {
+        final Person person = new Person();
+        final List<Person> personList = new ArrayList<>();
+        personList.add(person);
+        when(personController.getAllPersons()).thenReturn(personList);
+        final Response response = addressResource.addNewPersonToAddress(1, person);
+        Assert.assertEquals(response.getEntity().toString(), "Unable to create new person, person with given name already exists");
+    }
+
+
+
 }

@@ -3,7 +3,7 @@ ro\nttdata\tutorial\admin\controller\PersonControllerTest.class
 ro\nttdata\tutorial\admin\boundary\AddressResourceTest.class
 ro\nttdata\tutorial\admin\controller\CompanyControllerTest.class
 ro\nttdata\tutorial\status\EchoValidationTest.class
+ro\nttdata\tutorial\admin\entity\ValidationTest.class
 ro\nttdata\tutorial\admin\controller\AddressControllerTest.class
 ro\nttdata\tutorial\status\StatusResourceTest.class
 ro\nttdata\tutorial\admin\boundary\PersonResourceTest.class
-ro\nttdata\tutorial\status\PersonResourcetestNoAnnTest.class

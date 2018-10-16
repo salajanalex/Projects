@@ -22,7 +22,7 @@
     <mockito.version>2.7.13</mockito.version>
     <glassfish.version>2.22.2</glassfish.version>
     <jersey_version>LATEST</jersey_version>
-    <hibernate-validator.version>5.1.2.Final</hibernate-validator.version>
+    <hibernate-validator.version>6.0.13.Final</hibernate-validator.version>
     <javax-el.version>3.0.0</javax-el.version>
     <postgress.version>42.2.2</postgress.version>
   </properties>
@@ -78,12 +78,16 @@
     <!--<artifactId>jersey-bean-validation</artifactId>-->
     <!--<version>${jersey_version}</version>-->
     <!--</dependency>-->
+
+
     <dependency>
-      <groupId>org.hibernate</groupId>
+      <groupId>org.hibernate.validator</groupId>
       <artifactId>hibernate-validator</artifactId>
       <version>${hibernate-validator.version}</version>
-      <scope>test</scope>
+      <!--<scope>test</scope>-->
     </dependency>
+
+
     <!--<dependency>-->
     <!--<groupId>org.glassfish</groupId>-->
     <!--<artifactId>javax.el</artifactId>-->
@@ -101,6 +105,26 @@
       <artifactId>eclipselink</artifactId>
       <version>2.5.0</version>
     </dependency>
+
+
+    <dependency>
+      <groupId>javax.el</groupId>
+      <artifactId>javax.el-api</artifactId>
+      <version>2.2.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.web</groupId>
+      <artifactId>javax.el</artifactId>
+      <version>2.2.4</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.swagger/swagger-jaxrs -->
+    <dependency>
+      <groupId>io.swagger</groupId>
+      <artifactId>swagger-jaxrs</artifactId>
+      <version>1.5.20</version>
+    </dependency>
+
 
   </dependencies>
 

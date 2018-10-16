@@ -2,8 +2,11 @@ package ro.nttdata.tutorial.admin.entity;
 
 import org.eclipse.persistence.config.HintValues;
 import org.eclipse.persistence.config.QueryHints;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.List;
 
@@ -19,8 +22,14 @@ public class Company implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idcompany;
+
+    @Size(min = 2, max = 100, message = " name length must be between 2 and 100 characters")
+    @NotEmpty(message = "name cant be null")
     private String name;
+
+    @Size(min = 2, max = 100, message = " domain length must be between 2 and 100 characters")
     private String domain;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "company", cascade = CascadeType.MERGE)
     private List<Person> personList;
 

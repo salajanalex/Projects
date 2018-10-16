@@ -5,7 +5,7 @@ import ro.nttdata.tutorial.admin.entity.Person;
 import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Stateful
@@ -29,7 +29,7 @@ public class PersonController {
      * @param id
      */
     public void deletePerson(int id) {
-        Query query = entityManager.createQuery(Person.DELETE_PERSON_QUERY);
+        TypedQuery query = entityManager.createNamedQuery(Person.DELETE_PERSON_QUERY, Person.class);
         query.setParameter("id", id);
         query.executeUpdate();
     }
@@ -46,24 +46,20 @@ public class PersonController {
 
     /**
      * finding and returning all persons from DB
+     *
      * @return
      */
-//    @Transactional
     public List<Person> getAllPersons() {
-        Query query = entityManager.createQuery(Person.SELECT_PERSONS_QUERY);
-        List<Person> updatedPersons = query.getResultList();
-        for (Person person : updatedPersons) {
-            entityManager.refresh(person);
-        }
-        return updatedPersons;
+        TypedQuery query = entityManager.createNamedQuery(Person.SELECT_PERSONS_QUERY, Person.class);
+        return query.getResultList();
     }
 
     /**
      * Updating a person
+     *
      * @param person
      */
     public void updatePerson(Person person) {
         entityManager.merge(person);
     }
-
 }

@@ -1,9 +1,6 @@
 package ro.nttdata.tutorial.status;
 
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import ro.nttdata.tutorial.status.boundery.StatusResource;
 
 import javax.validation.ConstraintViolation;
@@ -13,6 +10,7 @@ import javax.validation.executable.ExecutableValidator;
 import java.lang.reflect.Method;
 import java.util.Set;
 
+@Ignore
 public class EchoValidationTest {
     private static ValidatorFactory validatorFactory;
     private static ExecutableValidator validator;

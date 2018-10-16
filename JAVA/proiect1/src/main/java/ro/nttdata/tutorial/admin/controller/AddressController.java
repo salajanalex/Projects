@@ -6,6 +6,8 @@ import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Stateful
@@ -27,7 +29,7 @@ public class AddressController {
      * @param id
      */
     public void deleteAddress(int id) {
-        Query query = entityManager.createQuery(Address.DELETE_ADDRESS_QUERY);
+        TypedQuery<Address> query = entityManager.createNamedQuery(Address.DELETE_ADDRESS_QUERY, Address.class);
         query.setParameter("id",id);
         query.executeUpdate();
     }
@@ -45,9 +47,16 @@ public class AddressController {
      * finds all Addresses from DB
      * @return
      */
-    public List<Address> getAllAddresses() {
-        Query query = entityManager.createQuery(Address.SELECT_ADDRESSES_QUERY);
-        return query.getResultList();
+    public List<Address> getAllAddresses() throws Exception {
+        TypedQuery<Address> query = entityManager.createNamedQuery(Address.SELECT_ADDRESSES_QUERY, Address.class);
+        if (query.getResultList() == null) {
+            throw new NullPointerException(Address.NULL_LIST_EXCEPTION_MESSAGE);
+        } else if (query.getResultList().isEmpty()) {
+            throw  new Exception(Address.EMPTY_LIST_EXCEPTION_MESSAGE);
+        } else {
+            return query.getResultList();
+        }
+
     }
 
     /**
