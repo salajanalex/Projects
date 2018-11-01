@@ -29,7 +29,7 @@ public class AddressResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/alladdresses")
-    public Response getAllAddresss() throws Exception {
+    public Response getAllAddresss() {
         List<Address> addressList = controller.getAllAddresses();
         return Response.status(Response.Status.OK).entity(addressList).build();
     }
@@ -60,8 +60,7 @@ public class AddressResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/new")
-    public Response addNewAddress( @Valid Address address) throws Exception {
-        List<Address> addressList = controller.getAllAddresses();
+    public Response addNewAddress( @Valid Address address) {
         controller.addAddress(address);
         Response.ResponseBuilder builder = Response.ok(address);
         return builder.build();
@@ -97,7 +96,7 @@ public class AddressResource {
     @DELETE
     @Path("/delete")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response deleteAddress(@QueryParam("id") int id) throws Exception {
+    public Response deleteAddress(@QueryParam("id") int id) {
         controller.deleteAddress(id);
         return Response.ok("Address with id= " + id + " deleted").build();
     }
@@ -137,7 +136,7 @@ public class AddressResource {
             personController.updatePerson(person);
             return Response.ok(address).build();
         } else {
-            return Response.ok("Unsuccessfully, Person or Addres with given id do not exist").build();
+            return Response.status(404).entity("Unsuccessfully, Person or Addres with given id do not exist").build();
         }
     }
 
@@ -149,7 +148,7 @@ public class AddressResource {
         List<Person> personList = personController.getAllPersons();
         for (Person person1 : personList) {
             if (person1.getFullName().equals(person.getFullName())) {
-                return Response.ok("Unable to create new person, person with given name already exists").build();
+                return Response.status(403).entity("Unable to create new person, person with given name already exists").build();
             }
         }
         Address address = controller.getAddressById(idAddress);
@@ -161,7 +160,7 @@ public class AddressResource {
             Response.ResponseBuilder builder = Response.ok(address);
             return builder.build();
         } else {
-            Response.ResponseBuilder builder = Response.ok("Person could not be created because Address not found");
+            Response.ResponseBuilder builder = Response.status(404).entity("Person could not be created because Address not found");
             return builder.build();
         }
     }

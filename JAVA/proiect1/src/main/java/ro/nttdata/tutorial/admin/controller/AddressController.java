@@ -5,9 +5,7 @@ import ro.nttdata.tutorial.admin.entity.Address;
 import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
-import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Stateful
@@ -47,12 +45,12 @@ public class AddressController {
      * finds all Addresses from DB
      * @return
      */
-    public List<Address> getAllAddresses() throws Exception {
+    public List<Address> getAllAddresses(){
         TypedQuery<Address> query = entityManager.createNamedQuery(Address.SELECT_ADDRESSES_QUERY, Address.class);
         if (query.getResultList() == null) {
             throw new NullPointerException(Address.NULL_LIST_EXCEPTION_MESSAGE);
         } else if (query.getResultList().isEmpty()) {
-            throw  new Exception(Address.EMPTY_LIST_EXCEPTION_MESSAGE);
+            throw  new IllegalStateException(Address.EMPTY_LIST_EXCEPTION_MESSAGE);
         } else {
             return query.getResultList();
         }

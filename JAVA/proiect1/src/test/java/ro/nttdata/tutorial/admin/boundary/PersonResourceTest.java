@@ -156,7 +156,7 @@ public class PersonResourceTest {
         Person person = null;
         when(personController.getPersonById(anyInt())).thenReturn(person);
         final Response response = personResource.removeFromCompany(anyInt());
-        assertEquals(response.getEntity().toString(), "Person with given id can't be found");
+        assertEquals("Person with given id can't be found", response.getEntity().toString());
     }
 
     @Test
@@ -167,7 +167,7 @@ public class PersonResourceTest {
         person.setAddress(address);
         when(personController.getPersonById(anyInt())).thenReturn(person);
         final Response response = personResource.updateAddressOfPerson(1, address);
-        assertEquals(response.getEntity(), person);
+        assertEquals(response.getEntity(), address);
     }
 
 

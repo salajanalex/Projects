@@ -1,0 +1,144 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "This is a sample for swagger-maven-plugin",
+    "version" : "v1",
+    "title" : "Swagger Maven Plugin Sample"
+  },
+  "basePath" : "/proiect1",
+  "tags" : [ {
+    "name" : "company"
+  } ],
+  "paths" : {
+    "/company/allcompanies" : {
+      "get" : {
+        "tags" : [ "company" ],
+        "summary" : "Lists all companies",
+        "description" : "Lists all companies",
+        "operationId" : "getAllCompanies",
+        "consumes" : [ "text/plain" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful retrieval of companies"
+          },
+          "404" : {
+            "description" : "Company records not found"
+          },
+          "500" : {
+            "description" : "Internal servererror"
+          }
+        }
+      }
+    },
+    "/company/new" : {
+      "post" : {
+        "tags" : [ "company" ],
+        "summary" : "Adds new Company",
+        "description" : "Adds a new Company",
+        "operationId" : "addNewCompany",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Company"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful added new Company"
+          },
+          "500" : {
+            "description" : "Internal servererror"
+          }
+        }
+      }
+    },
+    "/company/withid/{id}" : {
+      "get" : {
+        "tags" : [ "company" ],
+        "summary" : "Company",
+        "description" : "Returns the company with selected id",
+        "operationId" : "getCompanyById",
+        "consumes" : [ "text/plain" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful retrieval of company"
+          },
+          "404" : {
+            "description" : "Company record not found"
+          },
+          "500" : {
+            "description" : "Internal servererror"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Company" : {
+      "type" : "object",
+      "properties" : {
+        "idcompany" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "name" : {
+          "type" : "string",
+          "minLength" : 2,
+          "maxLength" : 100
+        },
+        "domain" : {
+          "type" : "string",
+          "minLength" : 2,
+          "maxLength" : 100
+        },
+        "personList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Person"
+          }
+        }
+      }
+    },
+    "Person" : {
+      "type" : "object",
+      "properties" : {
+        "idperson" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "name" : {
+          "type" : "string",
+          "minLength" : 2,
+          "maxLength" : 100
+        },
+        "surname" : {
+          "type" : "string",
+          "minLength" : 2,
+          "maxLength" : 100
+        },
+        "age" : {
+          "type" : "integer",
+          "format" : "int32",
+          "minimum" : 16.0,
+          "maximum" : 150.0
+        },
+        "fullName" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

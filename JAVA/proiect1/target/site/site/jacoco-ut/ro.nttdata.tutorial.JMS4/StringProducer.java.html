@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>StringProducer.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiect1 Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">ro.nttdata.tutorial.JMS4</a> &gt; <span class="el_source">StringProducer.java</span></div><h1>StringProducer.java</h1><pre class="source lang-java linenums">package ro.nttdata.tutorial.JMS4;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import ro.nttdata.tutorial.admin.controller.AddressController;
+import ro.nttdata.tutorial.admin.controller.CompanyController;
+import ro.nttdata.tutorial.admin.controller.PersonController;
+import ro.nttdata.tutorial.admin.entity.Address;
+import ro.nttdata.tutorial.admin.entity.Company;
+import ro.nttdata.tutorial.admin.entity.Person;
+import ro.nttdata.tutorial.admin.entityEnum.Entities;
+
+import javax.annotation.Resource;
+import javax.inject.Inject;
+import javax.jms.*;
+import javax.validation.constraints.Pattern;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import java.util.List;
+
+@Path(&quot;/jms&quot;)
+public class StringProducer {
+
+<span class="nc" id="L25">    public StringProducer() throws JMSException {</span>
+<span class="nc" id="L26">    }</span>
+
+    @Resource(mappedName = &quot;jms/ConnectionFactory&quot;)
+    private ConnectionFactory connectionFactory;
+
+    @Resource(mappedName = &quot;jms/Queue&quot;)
+    private Queue queue;
+
+    @Resource(mappedName = &quot;jms/Topic&quot;)
+    private Topic topic;
+
+    @Inject
+    private AddressController addressController;
+    @Inject
+    private PersonController personController;
+    @Inject
+    private CompanyController companyController;
+
+    /**
+     * adds message to queue and topic.
+     * @param string
+     * @throws JMSException
+     * @throws InterruptedException
+     */
+    @GET
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Path(&quot;/queue/{string}&quot;)
+    public void produceString(@PathParam(&quot;string&quot;) String string) throws JMSException, InterruptedException {
+<span class="nc" id="L54">        Connection connection = connectionFactory.createConnection();</span>
+<span class="nc" id="L55">        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);</span>
+
+<span class="nc" id="L57">        MessageProducer messageProducer = session.createProducer(queue);</span>
+<span class="nc" id="L58">        TextMessage message = session.createTextMessage();</span>
+<span class="nc" id="L59">        message.setText(&quot;This is a queue Message: &quot; + string);</span>
+<span class="nc" id="L60">        System.out.println(&quot;Sending message to queue: &quot; + message.getText());</span>
+<span class="nc" id="L61">        messageProducer.send(message);</span>
+
+<span class="nc" id="L63">        MessageProducer producer = session.createProducer(topic);</span>
+<span class="nc" id="L64">        TextMessage msg = session.createTextMessage(&quot;This is a topic message: &quot; + string);</span>
+<span class="nc" id="L65">        System.out.println(&quot;Sending message to topic: '&quot; + string + &quot;'&quot;);</span>
+<span class="nc" id="L66">        producer.send(msg);</span>
+
+<span class="nc" id="L68">    }</span>
+
+    /**
+     * Adds to Messaging Queue: most populated address / largest company / oldest Person.
+     * @param string of values &quot;address&quot; / &quot;company&quot; / &quot;person&quot;
+     * @throws JMSException
+     * @throws JsonProcessingException
+     */
+    @GET
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Path(&quot;/entity/{string}&quot;)
+    public void objectToQueue(@PathParam(&quot;string&quot;) @Pattern(message = &quot;Invalid Name&quot;,
+            regexp = &quot;\\b(company|address|person|COMPANY|ADDRESS|PERSON)\\b&quot;)
+                                          String string) throws JMSException, JsonProcessingException {
+<span class="nc" id="L82">        Connection connection = connectionFactory.createConnection();</span>
+<span class="nc" id="L83">        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);</span>
+<span class="nc" id="L84">        MessageProducer producer = session.createProducer(queue);</span>
+<span class="nc" id="L85">        TextMessage message = session.createTextMessage();</span>
+<span class="nc" id="L86">        boolean invalidInput = false;</span>
+
+<span class="nc" id="L88">        ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();</span>
+<span class="nc" id="L89">        String json = null;</span>
+
+<span class="nc" id="L91">        Entities entity = Entities.valueOf(string.toUpperCase());</span>
+<span class="nc bnc" id="L92" title="All 4 branches missed.">        switch (entity) {</span>
+            case ADDRESS:
+<span class="nc" id="L94">                json = ow.writeValueAsString(getLargestCompany());</span>
+<span class="nc" id="L95">                break;</span>
+            case COMPANY:
+<span class="nc" id="L97">                json = ow.writeValueAsString(getMostPopulatedAddress());</span>
+<span class="nc" id="L98">                break;</span>
+            case PERSON:
+<span class="nc" id="L100">                json = ow.writeValueAsString(getOldestPerson());</span>
+<span class="nc" id="L101">                break;</span>
+            default:
+<span class="nc" id="L103">                invalidInput = true;</span>
+        }
+<span class="nc bnc" id="L105" title="All 2 branches missed.">        if (invalidInput) {</span>
+<span class="nc" id="L106">            message = session.createTextMessage(&quot;production of Message failed, invalid input given: &quot; + string);</span>
+<span class="nc" id="L107">            producer.send(message);</span>
+        } else {
+<span class="nc" id="L109">            message.setText(json);</span>
+<span class="nc" id="L110">            producer.send(message);</span>
+        }
+
+<span class="nc" id="L113">    }</span>
+
+
+    public Company getLargestCompany() {
+<span class="nc" id="L117">        List&lt;Company&gt; companyList = companyController.getAllCompanies();</span>
+<span class="nc" id="L118">        Company latgestCompany = companyList.get(0);</span>
+<span class="nc bnc" id="L119" title="All 2 branches missed.">        for (Company company : companyList) {</span>
+<span class="nc bnc" id="L120" title="All 2 branches missed.">            if (company.getPersonList().size() &gt; latgestCompany.getPersonList().size()) {</span>
+<span class="nc" id="L121">                latgestCompany = company;</span>
+            }
+<span class="nc" id="L123">        }</span>
+<span class="nc" id="L124">        return  latgestCompany;</span>
+    }
+
+    public Address getMostPopulatedAddress() {
+<span class="nc" id="L128">        List&lt;Address&gt; addressList = addressController.getAllAddresses();</span>
+<span class="nc" id="L129">        Address mostPopulatedAddress = addressList.get(0);</span>
+<span class="nc bnc" id="L130" title="All 2 branches missed.">        for (Address address : addressList) {</span>
+<span class="nc bnc" id="L131" title="All 2 branches missed.">            if (address.getPersonList().size() &gt; mostPopulatedAddress.getPersonList().size()) {</span>
+<span class="nc" id="L132">                mostPopulatedAddress = address;</span>
+            }
+<span class="nc" id="L134">        }</span>
+<span class="nc" id="L135">        return mostPopulatedAddress;</span>
+    }
+
+    public Person getOldestPerson() {
+<span class="nc" id="L139">        List&lt;Person&gt; personList = personController.getAllPersons();</span>
+<span class="nc" id="L140">        Person oldestPerson = personList.get(0);</span>
+<span class="nc bnc" id="L141" title="All 2 branches missed.">        for (Person person : personList) {</span>
+<span class="nc bnc" id="L142" title="All 2 branches missed.">            if (person.getAge() &gt; oldestPerson.getAge()){</span>
+<span class="nc" id="L143">                oldestPerson = person;</span>
+            }
+<span class="nc" id="L145">        }</span>
+<span class="nc" id="L146">        return oldestPerson;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

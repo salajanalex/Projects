@@ -1,0 +1,21 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+proiect1 Maven Webapp,ro.nttdata.tutorial.admin.entity,Address,0,127,0,0,0,36,0,17,0,17
+proiect1 Maven Webapp,ro.nttdata.tutorial.admin.entity,Person,0,116,0,0,0,33,0,17,0,17
+proiect1 Maven Webapp,ro.nttdata.tutorial.admin.entity,PersonAddressDTO,8,35,0,0,4,8,2,5,2,5
+proiect1 Maven Webapp,ro.nttdata.tutorial.admin.entity,Company,0,78,0,0,0,24,0,12,0,12
+proiect1 Maven Webapp,ro.nttdata.tutorial.JMS4,StringProducer,247,0,18,0,57,0,16,0,6,0
+proiect1 Maven Webapp,ro.nttdata.tutorial.JMS4,StringProducer.new Object() {...},26,0,0,0,1,0,1,0,1,0
+proiect1 Maven Webapp,ro.nttdata.tutorial.JMS4,StringTopicConsumer,47,0,2,0,15,0,3,0,2,0
+proiect1 Maven Webapp,ro.nttdata.tutorial.JMS4,StringTopicConsumer2,47,0,2,0,15,0,3,0,2,0
+proiect1 Maven Webapp,ro.nttdata.tutorial.JMS4,StringQueueConsumer,44,0,2,0,14,0,3,0,2,0
+proiect1 Maven Webapp,ro.nttdata.tutorial.admin.boundary,AddressResource,1,215,2,12,1,46,2,14,0,9
+proiect1 Maven Webapp,ro.nttdata.tutorial.admin.boundary,PersonResource,49,255,13,17,12,64,10,13,0,8
+proiect1 Maven Webapp,ro.nttdata.tutorial.admin.boundary,CompanyResource,7,274,6,16,2,67,6,13,0,8
+proiect1 Maven Webapp,ro.nttdata.tutorial.admin.controller,PersonController,10,54,2,2,2,14,2,6,0,6
+proiect1 Maven Webapp,ro.nttdata.tutorial.admin.controller,AddressController,10,54,2,2,2,14,2,6,0,6
+proiect1 Maven Webapp,ro.nttdata.tutorial.admin.controller,CompanyController,0,64,0,4,0,16,0,8,0,6
+proiect1 Maven Webapp,ro.nttdata.tutorial.status.boundery,StatusResource,0,22,0,2,0,4,0,3,0,2
+proiect1 Maven Webapp,ro.nttdata.tutorial.rest,ApplicationConfig,39,0,0,0,9,0,1,0,1,0
+proiect1 Maven Webapp,ro.nttdata.tutorial.admin.entityEnum,EnumValueValidator,51,0,10,0,12,0,8,0,3,0
+proiect1 Maven Webapp,ro.nttdata.tutorial.admin.entityEnum,Entities,48,0,0,0,4,0,4,0,4,0
+proiect1 Maven Webapp,ro.nttdata.tutorial.admin.entityEnum,EntityBean,10,0,0,0,4,0,3,0,3,0

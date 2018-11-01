@@ -1,5 +1,6 @@
 package ro.nttdata.tutorial.admin.boundary;
 
+import io.swagger.annotations.*;
 import ro.nttdata.tutorial.admin.controller.AddressController;
 import ro.nttdata.tutorial.admin.controller.CompanyController;
 import ro.nttdata.tutorial.admin.controller.PersonController;
@@ -8,6 +9,7 @@ import ro.nttdata.tutorial.admin.entity.Company;
 import ro.nttdata.tutorial.admin.entity.Person;
 import ro.nttdata.tutorial.admin.entity.PersonAddressDTO;
 
+import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import javax.validation.Valid;
 import javax.ws.rs.*;
@@ -16,7 +18,8 @@ import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Dependent
+@Api(value = "/company")
 @Path("/company")
 public class CompanyResource {
 
@@ -31,12 +34,21 @@ public class CompanyResource {
      * Returning all companies as a JSON Response
      *
      * @return
-     * @throws Exception
      */
     @GET
+    @ApiOperation(
+            value = "Lists all companies",
+            notes = "Lists all companies"
+    )
+    @ApiResponses(value= {
+            @ApiResponse(code = 200, message = "Successful retrieval of companies"),
+            @ApiResponse(code = 404, message = "Company records not found"),
+            @ApiResponse(code = 500, message = "Internal servererror")
+    })
+    @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/allcompanies")
-    public Response getAllCompanies() throws Exception {
+    public Response getAllCompanies() {
         List<Company> companyList = controller.getAllCompanies();
         return Response.status(Response.Status.OK).entity(companyList).build();
     }
@@ -48,11 +60,23 @@ public class CompanyResource {
      * @return
      */
     @GET
+    @ApiOperation(
+            value = "Company",
+            notes = "Returns the company with selected id"
+    )
+    @ApiResponses(value= {
+            @ApiResponse(code = 200, message = "Successful retrieval of company"),
+            @ApiResponse(code = 404, message = "Company record not found"),
+            @ApiResponse(code = 500, message = "Internal servererror")
+    })
     @Consumes(MediaType.TEXT_PLAIN)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/withid/{id}")
     public Response getCompanyById(@PathParam("id") Integer id) {
         Company company = controller.getCompanyById(id);
+        if (company == null) {
+            return Response.status(404).entity("Company Record not found").build();
+        }
         Response.ResponseBuilder builder = Response.status(Response.Status.OK).entity(company);
         return builder.build();
     }
@@ -64,10 +88,18 @@ public class CompanyResource {
      * @return
      */
     @POST
+    @ApiOperation(
+            value = "Adds new Company",
+            notes = "Adds a new Company"
+    )
+    @ApiResponses(value= {
+            @ApiResponse(code = 200, message = "Successful added new Company"),
+            @ApiResponse(code = 500, message = "Internal servererror")
+    })
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/new")
-    public Response addNewCompany(@Valid Company company) throws Exception {
+    public Response addNewCompany(@Valid @ApiParam Company company) {
         controller.addCompany(company);
         Response.ResponseBuilder builder = Response.ok(company);
         return builder.build();
@@ -141,7 +173,7 @@ public class CompanyResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{idCompany}/addnewperson")
-    public Response addNewPersonToCompany(@PathParam("idCompany") int idCompany, @Valid PersonAddressDTO personAddressDTO) throws Exception {
+    public Response addNewPersonToCompany(@PathParam("idCompany") int idCompany, @Valid PersonAddressDTO personAddressDTO) {
         final Person person = personAddressDTO.getPerson();
         Address address = personAddressDTO.getAddress();
         Company company = controller.getCompanyById(idCompany);
@@ -180,7 +212,7 @@ public class CompanyResource {
             Response.ResponseBuilder builder = Response.ok(personAddressDTO);
             return builder.build();
         }
-        // else = if addressExists = false
+        // else: if addressExists = false
         person.setCompany(company);
         personController.addPerson(person);
         controller.updateCompany(company);

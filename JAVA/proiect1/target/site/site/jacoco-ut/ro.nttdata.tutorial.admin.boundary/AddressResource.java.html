@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>AddressResource.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiect1 Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">ro.nttdata.tutorial.admin.boundary</a> &gt; <span class="el_source">AddressResource.java</span></div><h1>AddressResource.java</h1><pre class="source lang-java linenums">package ro.nttdata.tutorial.admin.boundary;
+
+import ro.nttdata.tutorial.admin.controller.AddressController;
+import ro.nttdata.tutorial.admin.controller.PersonController;
+import ro.nttdata.tutorial.admin.entity.Address;
+import ro.nttdata.tutorial.admin.entity.Person;
+
+import javax.inject.Inject;
+import javax.validation.Valid;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import java.util.List;
+
+@Path(&quot;/address&quot;)
+<span class="fc" id="L16">public class AddressResource {</span>
+
+    @Inject
+    private AddressController controller;
+
+    @Inject
+    private PersonController personController;
+
+    /**
+     * Returns All Addresses as a JSON Response
+     *
+     * @return
+     */
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;/alladdresses&quot;)
+    public Response getAllAddresss() {
+<span class="fc" id="L33">        List&lt;Address&gt; addressList = controller.getAllAddresses();</span>
+<span class="fc" id="L34">        return Response.status(Response.Status.OK).entity(addressList).build();</span>
+    }
+
+    /**
+     * Return an Address as a JSON Response
+     *
+     * @param id
+     * @return
+     */
+    @GET
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;/withid&quot;)
+    public Response getAddressById(@QueryParam(&quot;id&quot;) Integer id) {
+<span class="fc" id="L48">        Address address = controller.getAddressById(id);</span>
+<span class="fc" id="L49">        Response.ResponseBuilder builder = Response.status(Response.Status.OK).entity(address);</span>
+<span class="fc" id="L50">        return builder.build();</span>
+    }
+
+    /**
+     * Adds new Address to DB
+     *
+     * @param address
+     * @return
+     */
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;/new&quot;)
+    public Response addNewAddress( @Valid Address address) {
+<span class="fc" id="L64">        controller.addAddress(address);</span>
+<span class="fc" id="L65">        Response.ResponseBuilder builder = Response.ok(address);</span>
+<span class="fc" id="L66">        return builder.build();</span>
+    }
+
+    /**
+     * Updates the Address of a given Person
+     *
+     * @param id
+     * @param address
+     * @return
+     */
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;/update/addressid&quot;)
+    public Response updateAddressOfPerson(@QueryParam(&quot;id&quot;) int id,  @Valid Address address) {
+<span class="fc" id="L81">        Person person = personController.getPersonById(id);</span>
+<span class="fc bfc" id="L82" title="All 2 branches covered.">        if (person != null) {</span>
+<span class="fc" id="L83">            person.setAddress(address);</span>
+<span class="fc" id="L84">            personController.updatePerson(person);</span>
+<span class="fc" id="L85">            return Response.ok(address).build();</span>
+        } else
+<span class="fc" id="L87">            return Response.status(204).entity(&quot;person with given id not found&quot;).build();</span>
+    }
+
+    /**
+     * Delets a person by ID
+     *
+     * @param id
+     * @return
+     */
+    @DELETE
+    @Path(&quot;/delete&quot;)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response deleteAddress(@QueryParam(&quot;id&quot;) int id) {
+<span class="fc" id="L100">        controller.deleteAddress(id);</span>
+<span class="fc" id="L101">        return Response.ok(&quot;Address with id= &quot; + id + &quot; deleted&quot;).build();</span>
+    }
+
+    /**
+     * Updates the address
+     *
+     * @param address
+     * @return
+     */
+    @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;/update&quot;)
+    public Response updateAddress(@Valid Address address) {
+<span class="fc" id="L115">        Address oldAddress = controller.getAddressById(address.getIdaddress());</span>
+<span class="fc bfc" id="L116" title="All 2 branches covered.">        if (oldAddress == null) {</span>
+<span class="fc" id="L117">            return Response.status(404).entity(&quot;No address with id = &quot; + address.getIdaddress() + &quot;found&quot;).build();</span>
+        }
+<span class="fc" id="L119">        List&lt;Person&gt; personList = oldAddress.getPersonList();</span>
+<span class="fc" id="L120">        address.setPersonList(personList);</span>
+<span class="fc" id="L121">        controller.updateAddress(address);</span>
+<span class="fc" id="L122">        return Response.ok(address).build();</span>
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;/addpersonbyid&quot;)
+    public Response addExistingPersonToAddress(@QueryParam(&quot;idAddress&quot;) int idAddress,
+                                               @QueryParam(&quot;idPerson&quot;) int idPerson) {
+<span class="fc" id="L131">        Address address = controller.getAddressById(idAddress);</span>
+<span class="fc" id="L132">        Person person = personController.getPersonById(idPerson);</span>
+<span class="pc bpc" id="L133" title="1 of 4 branches missed.">        if (person != null &amp;&amp; address != null) {</span>
+<span class="fc" id="L134">            person.setAddress(address);</span>
+<span class="fc" id="L135">            controller.updateAddress(address);</span>
+<span class="fc" id="L136">            personController.updatePerson(person);</span>
+<span class="fc" id="L137">            return Response.ok(address).build();</span>
+        } else {
+<span class="fc" id="L139">            return Response.status(404).entity(&quot;Unsuccessfully, Person or Addres with given id do not exist&quot;).build();</span>
+        }
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;/addnewperson&quot;)
+    public Response addNewPersonToAddress(@QueryParam(&quot;idAddress&quot;) int idAddress,  @Valid Person person) {
+<span class="fc" id="L148">        List&lt;Person&gt; personList = personController.getAllPersons();</span>
+<span class="fc bfc" id="L149" title="All 2 branches covered.">        for (Person person1 : personList) {</span>
+<span class="pc bpc" id="L150" title="1 of 2 branches missed.">            if (person1.getFullName().equals(person.getFullName())) {</span>
+<span class="fc" id="L151">                return Response.status(403).entity(&quot;Unable to create new person, person with given name already exists&quot;).build();</span>
+            }
+<span class="nc" id="L153">        }</span>
+<span class="fc" id="L154">        Address address = controller.getAddressById(idAddress);</span>
+<span class="fc bfc" id="L155" title="All 2 branches covered.">        if (address != null) {</span>
+<span class="fc" id="L156">            person.setAddress(address);</span>
+<span class="fc" id="L157">            personController.addPerson(person);</span>
+<span class="fc" id="L158">            controller.updateAddress(address);</span>
+<span class="fc" id="L159">            address = controller.getAddressById(address.getIdaddress());</span>
+<span class="fc" id="L160">            Response.ResponseBuilder builder = Response.ok(address);</span>
+<span class="fc" id="L161">            return builder.build();</span>
+        } else {
+<span class="fc" id="L163">            Response.ResponseBuilder builder = Response.status(404).entity(&quot;Person could not be created because Address not found&quot;);</span>
+<span class="fc" id="L164">            return builder.build();</span>
+        }
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

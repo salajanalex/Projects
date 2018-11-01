@@ -48,13 +48,13 @@ public class Person {
     @JoinColumn(name = "idaddress")
     @JsonIgnore
     @XmlInverseReference(mappedBy = "person")
-//    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL,  //in mappedBy -> numele campului de care depinde.
-//            fetch = FetchType.LAZY, optional = false)
     private Address address;
 
 
     public final static String DELETE_PERSON_QUERY = "Person.delete";
     public final static String SELECT_PERSONS_QUERY = "Person.findAll";
+    public final static String EMPTY_LIST_EXCEPTION_MESSAGE = "The returned list is empty";
+    public final static String NULL_LIST_EXCEPTION_MESSAGE = "The returned list is NULL";
 
     public Person() {
     }

@@ -37,7 +37,7 @@ public class AddressResourceTest {
     }
 
     @Test
-    public void testAddNewAddress() throws Exception {
+    public void testAddNewAddress() {
         Assert.assertThat(addressResource.addNewAddress(address).getEntity().toString(),
                 containsString(Integer.toString(address.getIdaddress())));
     }
@@ -82,7 +82,7 @@ public class AddressResourceTest {
     }
 
     @Test
-    public void testDeleteAddress() throws Exception {
+    public void testDeleteAddress() {
 
         Assert.assertThat(addressResource.deleteAddress(address.getIdaddress()).getEntity().toString(),
                 containsString(Integer.toString(address.getIdaddress())));
@@ -120,7 +120,7 @@ public class AddressResourceTest {
         when(addressController.getAddressById(anyInt())).thenReturn(address1);
         when(personController.getPersonById(anyInt())).thenReturn(person);
         final Response response = addressResource.addExistingPersonToAddress(address.getIdaddress(), person.getIdperson());
-        Assert.assertEquals(response.getEntity().toString(), "Unsuccessfully, Person or Addres with given id do not exist");
+        Assert.assertEquals("Unsuccessfully, Person or Addres with given id do not exist", response.getEntity().toString());
     }
 
     @Test
@@ -141,7 +141,7 @@ public class AddressResourceTest {
         when(personController.getAllPersons()).thenReturn(personList);
         when(addressController.getAddressById(anyInt())).thenReturn(address1);
         final Response response = addressResource.addNewPersonToAddress(1, person);
-        Assert.assertEquals(response.getEntity().toString(), "Person could not be created because Address not found");
+        Assert.assertEquals( "Person could not be created because Address not found", response.getEntity().toString());
     }
 
     /**
@@ -154,7 +154,7 @@ public class AddressResourceTest {
         personList.add(person);
         when(personController.getAllPersons()).thenReturn(personList);
         final Response response = addressResource.addNewPersonToAddress(1, person);
-        Assert.assertEquals(response.getEntity().toString(), "Unable to create new person, person with given name already exists");
+        Assert.assertEquals("Unable to create new person, person with given name already exists", response.getEntity().toString());
     }
 
 

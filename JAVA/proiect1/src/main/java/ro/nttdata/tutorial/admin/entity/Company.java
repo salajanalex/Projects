@@ -5,9 +5,7 @@ import org.eclipse.persistence.config.QueryHints;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.io.Serializable;
 import java.util.List;
 
 @Entity
@@ -17,7 +15,7 @@ import java.util.List;
                 hints={@QueryHint(name= QueryHints.REFRESH, value= HintValues.TRUE)}),
         @NamedQuery(name = Company.DELETE_COMPANY_QUERY, query = "DELETE from Company c WHERE c.idcompany = :id")
 })
-public class Company implements Serializable {
+public class Company {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,8 +33,8 @@ public class Company implements Serializable {
 
     public final static String GET_ALL_COMPANIES_QUERY = "Company.findAll";
     public final static String DELETE_COMPANY_QUERY = "Company.delete";
-    public final static String EMPTY_LIST_EXCEPTION_MESSAGE = "List is empty";
-    public final static String NULL_LIST_EXCEPTION_MESSAGE = "The list is NULL";
+    public final static String EMPTY_LIST_EXCEPTION_MESSAGE = "The returned list is empty";
+    public final static String NULL_LIST_EXCEPTION_MESSAGE = "The returned list is NULL";
 
     public Company() {
     }

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Company.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiect1 Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">ro.nttdata.tutorial.admin.entity</a> &gt; <span class="el_source">Company.java</span></div><h1>Company.java</h1><pre class="source lang-java linenums">package ro.nttdata.tutorial.admin.entity;
+
+import org.eclipse.persistence.config.HintValues;
+import org.eclipse.persistence.config.QueryHints;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.persistence.*;
+import javax.validation.constraints.Size;
+import java.util.List;
+
+@Entity
+//@Table(name = &quot;company&quot;, schema = &quot;proiect1&quot;)
+@NamedQueries({
+        @NamedQuery(name = Company.GET_ALL_COMPANIES_QUERY, query = &quot;SELECT c FROM Company c&quot;,
+                hints={@QueryHint(name= QueryHints.REFRESH, value= HintValues.TRUE)}),
+        @NamedQuery(name = Company.DELETE_COMPANY_QUERY, query = &quot;DELETE from Company c WHERE c.idcompany = :id&quot;)
+})
+public class Company {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idcompany;
+
+    @Size(min = 2, max = 100, message = &quot; name length must be between 2 and 100 characters&quot;)
+    @NotEmpty(message = &quot;name cant be null&quot;)
+    private String name;
+
+    @Size(min = 2, max = 100, message = &quot; domain length must be between 2 and 100 characters&quot;)
+    private String domain;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = &quot;company&quot;, cascade = CascadeType.MERGE)
+    private List&lt;Person&gt; personList;
+
+    public final static String GET_ALL_COMPANIES_QUERY = &quot;Company.findAll&quot;;
+    public final static String DELETE_COMPANY_QUERY = &quot;Company.delete&quot;;
+    public final static String EMPTY_LIST_EXCEPTION_MESSAGE = &quot;The returned list is empty&quot;;
+    public final static String NULL_LIST_EXCEPTION_MESSAGE = &quot;The returned list is NULL&quot;;
+
+<span class="fc" id="L39">    public Company() {</span>
+<span class="fc" id="L40">    }</span>
+
+<span class="fc" id="L42">    public Company(int id, String name, String domain) {</span>
+<span class="fc" id="L43">        this.idcompany = id;</span>
+<span class="fc" id="L44">        this.name = name;</span>
+<span class="fc" id="L45">        this.domain = domain;</span>
+<span class="fc" id="L46">    }</span>
+
+<span class="fc" id="L48">    public Company(String name, String domain) {</span>
+<span class="fc" id="L49">        this.name = name;</span>
+<span class="fc" id="L50">        this.domain = domain;</span>
+<span class="fc" id="L51">    }</span>
+
+    public int getIdcompany() {
+<span class="fc" id="L54">        return idcompany;</span>
+    }
+
+    public void setIdcompany(int idcompany) {
+<span class="fc" id="L58">        this.idcompany = idcompany;</span>
+<span class="fc" id="L59">    }</span>
+
+    public String getName() {
+<span class="fc" id="L62">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="fc" id="L66">        this.name = name;</span>
+<span class="fc" id="L67">    }</span>
+
+    public String getDomain() {
+<span class="fc" id="L70">        return domain;</span>
+    }
+
+    public void setDomain(String domain) {
+<span class="fc" id="L74">        this.domain = domain;</span>
+<span class="fc" id="L75">    }</span>
+
+    public List&lt;Person&gt; getPersonList() {
+<span class="fc" id="L78">        return personList;</span>
+    }
+
+    public void setPersonList(List&lt;Person&gt; personList) {
+<span class="fc" id="L82">        this.personList = personList;</span>
+<span class="fc" id="L83">    }</span>
+
+    @Override
+    public String toString() {
+<span class="fc" id="L87">        return &quot;Company{&quot; +</span>
+                &quot;idcompany=&quot; + idcompany +
+                &quot;, name='&quot; + name + '\'' +
+                &quot;, domain='&quot; + domain + '\'' +
+                '}';
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

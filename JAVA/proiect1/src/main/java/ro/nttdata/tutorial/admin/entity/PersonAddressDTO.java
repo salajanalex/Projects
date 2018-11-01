@@ -1,8 +1,8 @@
 package ro.nttdata.tutorial.admin.entity;
 
 public class PersonAddressDTO {
-    public Person person;
-    public Address address;
+    private Person person;
+    private Address address;
 
     public PersonAddressDTO() {}
 

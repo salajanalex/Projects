@@ -62,7 +62,7 @@ public class AddressControllerTest {
         final String capturedQuery = captorString.getValue();
         final Class capturedClass = captorClass.getValue();
         verify(query, times(1)).executeUpdate();
-        assertEquals(capturedQuery, Address.DELETE_ADDRESS_QUERY);
+        assertEquals(Address.DELETE_ADDRESS_QUERY, capturedQuery);
         assertEquals(capturedClass, Address.class);
     }
 
@@ -77,7 +77,7 @@ public class AddressControllerTest {
         verify(entityManager).createNamedQuery(captorString.capture(), captorClass.capture());
         final String capturedQuery = captorString.getValue();
         final Class capturedClass = captorClass.getValue();
-        assertEquals(capturedQuery, Address.SELECT_ADDRESSES_QUERY);
+        assertEquals(Address.SELECT_ADDRESSES_QUERY, capturedQuery);
         assertEquals(capturedClass, Address.class);
         assertEquals(controllerAddresses, addressList);
     }

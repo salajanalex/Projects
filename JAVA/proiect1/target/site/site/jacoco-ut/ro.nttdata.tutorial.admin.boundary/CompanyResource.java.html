@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>CompanyResource.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiect1 Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">ro.nttdata.tutorial.admin.boundary</a> &gt; <span class="el_source">CompanyResource.java</span></div><h1>CompanyResource.java</h1><pre class="source lang-java linenums">package ro.nttdata.tutorial.admin.boundary;
+
+import io.swagger.annotations.*;
+import ro.nttdata.tutorial.admin.controller.AddressController;
+import ro.nttdata.tutorial.admin.controller.CompanyController;
+import ro.nttdata.tutorial.admin.controller.PersonController;
+import ro.nttdata.tutorial.admin.entity.Address;
+import ro.nttdata.tutorial.admin.entity.Company;
+import ro.nttdata.tutorial.admin.entity.Person;
+import ro.nttdata.tutorial.admin.entity.PersonAddressDTO;
+
+import javax.enterprise.context.Dependent;
+import javax.inject.Inject;
+import javax.validation.Valid;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import java.util.ArrayList;
+import java.util.List;
+
+@Dependent
+@Api(value = &quot;/company&quot;)
+@Path(&quot;/company&quot;)
+<span class="fc" id="L24">public class CompanyResource {</span>
+
+    @Inject
+    private CompanyController controller;
+    @Inject
+    private PersonController personController;
+    @Inject
+    private AddressController addressController;
+
+    /**
+     * Returning all companies as a JSON Response
+     *
+     * @return
+     */
+    @GET
+    @ApiOperation(
+            value = &quot;Lists all companies&quot;,
+            notes = &quot;Lists all companies&quot;
+    )
+    @ApiResponses(value= {
+            @ApiResponse(code = 200, message = &quot;Successful retrieval of companies&quot;),
+            @ApiResponse(code = 404, message = &quot;Company records not found&quot;),
+            @ApiResponse(code = 500, message = &quot;Internal servererror&quot;)
+    })
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;/allcompanies&quot;)
+    public Response getAllCompanies() {
+<span class="fc" id="L52">        List&lt;Company&gt; companyList = controller.getAllCompanies();</span>
+<span class="fc" id="L53">        return Response.status(Response.Status.OK).entity(companyList).build();</span>
+    }
+
+    /**
+     * Returning a company by given id. JSON Response
+     *
+     * @param id
+     * @return
+     */
+    @GET
+    @ApiOperation(
+            value = &quot;Company&quot;,
+            notes = &quot;Returns the company with selected id&quot;
+    )
+    @ApiResponses(value= {
+            @ApiResponse(code = 200, message = &quot;Successful retrieval of company&quot;),
+            @ApiResponse(code = 404, message = &quot;Company record not found&quot;),
+            @ApiResponse(code = 500, message = &quot;Internal servererror&quot;)
+    })
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;/withid/{id}&quot;)
+    public Response getCompanyById(@PathParam(&quot;id&quot;) Integer id) {
+<span class="fc" id="L76">        Company company = controller.getCompanyById(id);</span>
+<span class="pc bpc" id="L77" title="1 of 2 branches missed.">        if (company == null) {</span>
+<span class="nc" id="L78">            return Response.status(404).entity(&quot;Company Record not found&quot;).build();</span>
+        }
+<span class="fc" id="L80">        Response.ResponseBuilder builder = Response.status(Response.Status.OK).entity(company);</span>
+<span class="fc" id="L81">        return builder.build();</span>
+    }
+
+    /**
+     * Creating a new company and returning it as a JSON Response
+     *
+     * @param company
+     * @return
+     */
+    @POST
+    @ApiOperation(
+            value = &quot;Adds new Company&quot;,
+            notes = &quot;Adds a new Company&quot;
+    )
+    @ApiResponses(value= {
+            @ApiResponse(code = 200, message = &quot;Successful added new Company&quot;),
+            @ApiResponse(code = 500, message = &quot;Internal servererror&quot;)
+    })
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;/new&quot;)
+    public Response addNewCompany(@Valid @ApiParam Company company) {
+<span class="fc" id="L103">        controller.addCompany(company);</span>
+<span class="fc" id="L104">        Response.ResponseBuilder builder = Response.ok(company);</span>
+<span class="fc" id="L105">        return builder.build();</span>
+    }
+
+    /**
+     * updating an existing company, Id must also be specified in the company JSON sent as body.
+     *
+     * @param company
+     * @return
+     */
+    @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;/update&quot;)
+    public Response updateCompany(@Valid Company company) {
+<span class="fc" id="L119">        Company oldCompany = controller.getCompanyById(company.getIdcompany());</span>
+<span class="fc" id="L120">        List&lt;Person&gt; personList = oldCompany.getPersonList();</span>
+<span class="fc" id="L121">        company.setPersonList(personList);</span>
+<span class="fc" id="L122">        controller.updateCompany(company);</span>
+<span class="fc" id="L123">        return Response.ok(company).build();</span>
+    }
+
+    /**
+     * Deleting existing company by id
+     * @param id
+     * @return
+     */
+    @DELETE
+    @Path(&quot;/delete/{id}&quot;)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response deleteCompany(@PathParam(&quot;id&quot;) int id) {
+<span class="fc" id="L135">        controller.deleteCompany(id);</span>
+<span class="fc" id="L136">        return Response.ok(&quot;Company with id= &quot; + id + &quot; deleted&quot;).build();</span>
+    }
+
+
+    /**
+     * Adding an existing person to an existing company.
+     * Id of company and id of person must be specidied in address.
+     *
+     * @param idCompany
+     * @param idPerson
+     * @return
+     */
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;/{idCompany}/addpersonbyid/{idPerson}&quot;)
+    public Response addExistingPersonToCompany(@PathParam(&quot;idCompany&quot;) int idCompany,
+                                               @PathParam(&quot;idPerson&quot;) int idPerson) {
+<span class="fc" id="L154">        Company company = controller.getCompanyById(idCompany);</span>
+<span class="fc" id="L155">        Person person = personController.getPersonById(idPerson);</span>
+<span class="pc bpc" id="L156" title="2 of 4 branches missed.">        if (company != null &amp;&amp; person != null) {</span>
+<span class="fc" id="L157">            person.setCompany(company);</span>
+<span class="fc" id="L158">            controller.updateCompany(company);</span>
+<span class="fc" id="L159">            personController.updatePerson(person); //nu cred ca trebe</span>
+
+        }
+<span class="fc" id="L162">        Response.ResponseBuilder builder = Response.ok(company);</span>
+<span class="fc" id="L163">        return builder.build();</span>
+    }
+
+    /**
+     * Creating a new person and adding it to an existing company
+     *
+     * @param
+     * @return
+     */
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path(&quot;/{idCompany}/addnewperson&quot;)
+    public Response addNewPersonToCompany(@PathParam(&quot;idCompany&quot;) int idCompany, @Valid PersonAddressDTO personAddressDTO) {
+<span class="fc" id="L177">        final Person person = personAddressDTO.getPerson();</span>
+<span class="fc" id="L178">        Address address = personAddressDTO.getAddress();</span>
+<span class="fc" id="L179">        Company company = controller.getCompanyById(idCompany);</span>
+<span class="fc" id="L180">        boolean addressExists = false;</span>
+<span class="fc bfc" id="L181" title="All 2 branches covered.">        if (person == null) {</span>
+<span class="fc" id="L182">            return Response.status(404).entity(&quot;Invalid person body, person appears to be null&quot;).build();</span>
+        }
+<span class="fc bfc" id="L184" title="All 2 branches covered.">        if (company == null) {</span>
+<span class="fc" id="L185">            return Response.status(404).entity(&quot;Company with if = &quot; + idCompany + &quot; not found&quot;).build();</span>
+        }
+<span class="fc bfc" id="L187" title="All 2 branches covered.">        if (address == null) {</span>
+<span class="fc" id="L188">            person.setCompany(company);</span>
+<span class="fc" id="L189">            personController.addPerson(person);</span>
+<span class="fc" id="L190">            controller.updateCompany(company);</span>
+<span class="fc" id="L191">            company = controller.getCompanyById(company.getIdcompany());</span>
+<span class="fc" id="L192">            Response.ResponseBuilder builder = Response.ok(company);</span>
+<span class="fc" id="L193">            return builder.build();</span>
+        }
+        //if address != null
+<span class="fc" id="L196">        List&lt;Address&gt; addressList = addressController.getAllAddresses();</span>
+<span class="fc bfc" id="L197" title="All 2 branches covered.">        for (Address eachAddress : addressList) {</span>
+<span class="pc bpc" id="L198" title="2 of 4 branches missed.">            if ((eachAddress.getNumber() == address.getNumber()) &amp;&amp; eachAddress.getStreet().equals(address.getStreet())</span>
+<span class="pc bpc" id="L199" title="1 of 2 branches missed.">                    &amp;&amp; eachAddress.getCity().equals(address.getCity())) {</span>
+<span class="fc" id="L200">                address = eachAddress;</span>
+<span class="fc" id="L201">                addressExists = true;</span>
+<span class="fc" id="L202">                break;</span>
+            }
+<span class="nc" id="L204">        }</span>
+<span class="fc bfc" id="L205" title="All 2 branches covered.">        if (addressExists) {</span>
+<span class="fc" id="L206">            person.setCompany(company);</span>
+<span class="fc" id="L207">            personController.addPerson(person);</span>
+<span class="fc" id="L208">            controller.updateCompany(company);</span>
+<span class="fc" id="L209">            person.setAddress(address);</span>
+<span class="fc" id="L210">            address.addPrsonToAddress(person);</span>
+<span class="fc" id="L211">            addressController.updateAddress(address);</span>
+<span class="fc" id="L212">            Response.ResponseBuilder builder = Response.ok(personAddressDTO);</span>
+<span class="fc" id="L213">            return builder.build();</span>
+        }
+        // else: if addressExists = false
+<span class="fc" id="L216">        person.setCompany(company);</span>
+<span class="fc" id="L217">        personController.addPerson(person);</span>
+<span class="fc" id="L218">        controller.updateCompany(company);</span>
+<span class="fc" id="L219">        person.setAddress(address);</span>
+<span class="fc" id="L220">        List&lt;Person&gt; personList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L221">        personList.add(person);</span>
+<span class="fc" id="L222">        address.setPersonList(personList);</span>
+<span class="fc" id="L223">        addressController.addAddress(address);</span>
+<span class="fc" id="L224">        addressController.updateAddress(address);</span>
+<span class="fc" id="L225">        Response.ResponseBuilder builder = Response.ok(personAddressDTO);</span>
+<span class="fc" id="L226">        return builder.build();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

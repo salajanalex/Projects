@@ -6,7 +6,6 @@ import org.eclipse.persistence.config.QueryHints;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
 
@@ -36,20 +35,13 @@ public class Address {
     @Size(min = 2, max = 100, message = "country length must be between 2 and 100 characters")
     private String country;
 
-//    @OneToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "idperson")
-//    @JsonIgnore  //ca sa nu mearga lainfinit din adresa in persoana si invers.
-//    @XmlInverseReference(mappedBy = "address")
-//    private Person person;
-
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "address", cascade = CascadeType.MERGE)
-    @NotNull(message = "personList cant be null")
     private List<Person> personList;
 
     public final static String DELETE_ADDRESS_QUERY = "Address.delete";
     public final static String SELECT_ADDRESSES_QUERY = "Address.findAll";
-    public final static String EMPTY_LIST_EXCEPTION_MESSAGE = "List is empty";
-    public final static String NULL_LIST_EXCEPTION_MESSAGE = "The list is NULL";
+    public final static String EMPTY_LIST_EXCEPTION_MESSAGE = "The returned list is empty";
+    public final static String NULL_LIST_EXCEPTION_MESSAGE = "The returned list is NULL";
 
     public Address() {
     }

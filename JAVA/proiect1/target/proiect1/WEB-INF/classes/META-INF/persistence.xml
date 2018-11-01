@@ -23,5 +23,9 @@
             <!--&lt;!&ndash;<property name="eclipselink.ddl-generation.output-mode" value="database"/>&ndash;&gt;-->
         <!--</properties>-->
 
+        <!--<properties>-->
+                <!--<property name="jndiName" value="XAConnectionFactory"/>-->
+        <!--</properties>-->
+
     </persistence-unit>
 </persistence>

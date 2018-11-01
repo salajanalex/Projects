@@ -87,7 +87,7 @@ public class PersonControllerTest {
         final String capturedQuery = captorString.getValue();
         final Class capturedClass = captorClass.getValue();
         verify(query, times(1)).executeUpdate();
-        assertEquals(capturedQuery, Person.DELETE_PERSON_QUERY);
+        assertEquals( Person.DELETE_PERSON_QUERY, capturedQuery);
         assertEquals(capturedClass, Person.class);
 
     }
@@ -117,7 +117,7 @@ public class PersonControllerTest {
         final String capturedString = captorString.getValue();
         assertEquals(result, personList);
         assertEquals(capturedClass, Person.class);
-        assertEquals(capturedString, Person.SELECT_PERSONS_QUERY);
+        assertEquals(Person.SELECT_PERSONS_QUERY, capturedString);
 
     }
 

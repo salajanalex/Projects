@@ -34,21 +34,21 @@ public class ValidationTest {
     public void testAddressViolations() {
         Address address = new Address("a", -2, "b", "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii");
         Set<ConstraintViolation<Address>> violationSet = validator.validate(address);
-        Assert.assertEquals(violationSet.size(), 5);
+        Assert.assertEquals(4, violationSet.size());
     }
 
     @Test
     public void testCompanyViolations() {
         Company company = new Company("","a");
         Set<ConstraintViolation<Company>> violationSet = validator.validate(company);
-        Assert.assertEquals(violationSet.size(), 3);
+        Assert.assertEquals(3, violationSet.size());
     }
 
     @Test
     public void testPersonViolations() {
         Person person = new Person("", "b", 222);
         Set<ConstraintViolation<Person>> violationSet = validator.validate(person);
-        Assert.assertEquals(violationSet.size(), 4);
+        Assert.assertEquals(4, violationSet.size());
     }
 
 }

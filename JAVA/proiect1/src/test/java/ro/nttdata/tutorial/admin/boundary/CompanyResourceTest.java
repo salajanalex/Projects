@@ -2,7 +2,6 @@ package ro.nttdata.tutorial.admin.boundary;
 
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -16,8 +15,6 @@ import ro.nttdata.tutorial.admin.entity.Company;
 import ro.nttdata.tutorial.admin.entity.Person;
 import ro.nttdata.tutorial.admin.entity.PersonAddressDTO;
 
-import javax.persistence.EntityManager;
-import javax.persistence.ManyToOne;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
@@ -117,7 +114,7 @@ public class CompanyResourceTest {
         when(companyController.getCompanyById(anyInt())).thenReturn(null);
         Response response = companyResource.addNewPersonToCompany(1, personAddressDTO);
         Assert.assertEquals(response.getStatus(), Response.Status.NOT_FOUND.getStatusCode());
-        Assert.assertEquals(response.getEntity().toString(), "Company with if = " + 1 + " not found");
+        Assert.assertEquals("Company with if = " + 1 + " not found", response.getEntity().toString());
     }
 
     /**

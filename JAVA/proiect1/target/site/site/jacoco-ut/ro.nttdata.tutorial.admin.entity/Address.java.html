@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Address.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">proiect1 Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">ro.nttdata.tutorial.admin.entity</a> &gt; <span class="el_source">Address.java</span></div><h1>Address.java</h1><pre class="source lang-java linenums">package ro.nttdata.tutorial.admin.entity;
+
+import org.eclipse.persistence.config.HintValues;
+import org.eclipse.persistence.config.QueryHints;
+
+import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
+import java.util.List;
+
+@Entity
+//@Table(name = &quot;address&quot;, schema = &quot;proiect1&quot;)
+@NamedQueries({
+        @NamedQuery(name = Address.SELECT_ADDRESSES_QUERY, query = &quot;SELECT a FROM Address a&quot;,
+                hints={@QueryHint(name= QueryHints.REFRESH, value= HintValues.TRUE)}),
+        @NamedQuery(name = Address.DELETE_ADDRESS_QUERY, query = &quot;DELETE from Address a WHERE a.idaddress = :id&quot;)
+})
+public class Address {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idaddress;
+
+    @Size(min = 2, max = 100, message = &quot;Street lengths must be between 2 and 100 characters&quot;)
+    private String street;
+
+    @Min(value = 1, message = &quot;Nr cant be less than 1&quot;)
+    @Max(value = 9999, message = &quot;Nr cant be greater than 9999&quot;)
+    private int number;
+
+    @Size(min = 2, max = 100, message = &quot;city length must be between 2 and 100 characters&quot;)
+    private String city;
+
+    @Size(min = 2, max = 100, message = &quot;country length must be between 2 and 100 characters&quot;)
+    private String country;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = &quot;address&quot;, cascade = CascadeType.MERGE)
+    private List&lt;Person&gt; personList;
+
+    public final static String DELETE_ADDRESS_QUERY = &quot;Address.delete&quot;;
+    public final static String SELECT_ADDRESSES_QUERY = &quot;Address.findAll&quot;;
+    public final static String EMPTY_LIST_EXCEPTION_MESSAGE = &quot;The returned list is empty&quot;;
+    public final static String NULL_LIST_EXCEPTION_MESSAGE = &quot;The returned list is NULL&quot;;
+
+<span class="fc" id="L46">    public Address() {</span>
+<span class="fc" id="L47">    }</span>
+
+<span class="fc" id="L49">    public Address(int idaddress, String street, int number, String city, String country) {</span>
+<span class="fc" id="L50">        this.idaddress = idaddress;</span>
+<span class="fc" id="L51">        this.street = street;</span>
+<span class="fc" id="L52">        this.number = number;</span>
+<span class="fc" id="L53">        this.city = city;</span>
+<span class="fc" id="L54">        this.country = country;</span>
+<span class="fc" id="L55">    }</span>
+
+<span class="fc" id="L57">    public Address(String street, int number, String city, String country) {</span>
+<span class="fc" id="L58">        this.street = street;</span>
+<span class="fc" id="L59">        this.number = number;</span>
+<span class="fc" id="L60">        this.city = city;</span>
+<span class="fc" id="L61">        this.country = country;</span>
+<span class="fc" id="L62">    }</span>
+
+
+    public int getIdaddress() {
+<span class="fc" id="L66">        return idaddress;</span>
+    }
+
+    public void setIdaddress(int idaddress) {
+<span class="fc" id="L70">        this.idaddress = idaddress;</span>
+<span class="fc" id="L71">    }</span>
+
+    public String getStreet() {
+<span class="fc" id="L74">        return street;</span>
+    }
+
+    public void setStreet(String street) {
+<span class="fc" id="L78">        this.street = street;</span>
+<span class="fc" id="L79">    }</span>
+
+    public int getNumber() {
+<span class="fc" id="L82">        return number;</span>
+    }
+
+    public void setNumber(int number) {
+<span class="fc" id="L86">        this.number = number;</span>
+<span class="fc" id="L87">    }</span>
+
+    public String getCity() {
+<span class="fc" id="L90">        return city;</span>
+    }
+
+    public void setCity(String city) {
+<span class="fc" id="L94">        this.city = city;</span>
+<span class="fc" id="L95">    }</span>
+
+    public String getCountry() {
+<span class="fc" id="L98">        return country;</span>
+    }
+
+    public void setCountry(String country) {
+<span class="fc" id="L102">        this.country = country;</span>
+<span class="fc" id="L103">    }</span>
+
+    public List&lt;Person&gt; getPersonList() {
+<span class="fc" id="L106">        return personList;</span>
+    }
+
+    public void setPersonList(List&lt;Person&gt; personList) {
+<span class="fc" id="L110">        this.personList = personList;</span>
+<span class="fc" id="L111">    }</span>
+
+    public void addPrsonToAddress(Person person){
+<span class="fc" id="L114">        this.personList.add(person);</span>
+<span class="fc" id="L115">    }</span>
+
+
+    @Override
+    public String toString() {
+<span class="fc" id="L120">        return &quot;Address{&quot; +</span>
+                &quot;idaddress=&quot; + idaddress +
+                &quot;, street='&quot; + street + '\'' +
+                &quot;, number=&quot; + number +
+                &quot;, city='&quot; + city + '\'' +
+                &quot;, country='&quot; + country + '\'' +
+                &quot;, personList=&quot; + personList +
+                '}';
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

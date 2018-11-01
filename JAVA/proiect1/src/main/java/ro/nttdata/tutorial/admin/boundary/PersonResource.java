@@ -63,7 +63,7 @@ public class PersonResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/new")
-    public Response addNewPerson(PersonAddressDTO personAndAddress) throws Exception {
+    public Response addNewPerson(PersonAddressDTO personAndAddress) {
         boolean addressExists = false;
         Person person = personAndAddress.getPerson();
         Address address = personAndAddress.getAddress();
@@ -143,20 +143,57 @@ public class PersonResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{id}/updateaddress")
     public Response updateAddressOfPerson(@PathParam("id") int id, @Valid Address address) {
-        Person person = controller.getPersonById(id);
-        Address addressToUpdate = person.getAddress();
-        addressToUpdate.setCountry(address.getCountry());
-        addressToUpdate.setCity(address.getCity());
-        addressToUpdate.setNumber(address.getNumber());
-        addressToUpdate.setStreet(address.getStreet());
-        List<Person> personList = address.getPersonList();
-        personList.add(person);
-        addressToUpdate.setPersonList(personList);
-        person.setAddress(addressToUpdate);
+        Person personToUpdate = controller.getPersonById(id);
+        if (personToUpdate == null) {
+            return Response.status(403).entity("Person with given ID not fond").build();
+        }
+        boolean addressExists = false;
+        List<Address> addressList = addressController.getAllAddresses();
+        for (Address eachAddress : addressList) {
+            if ((eachAddress.getNumber() == address.getNumber()) && eachAddress.getStreet().equals(address.getStreet())
+                    && eachAddress.getCity().equals(address.getCity())) {
+                address = eachAddress;
+                addressExists = true;
+                break;
+            }
+        }
+        if (addressExists) {
+            personToUpdate.setAddress(address);
+            controller.updatePerson(personToUpdate);
+            addressController.updateAddress(address);
+            return Response.ok(address).build() ;
+        } else {
+            addressController.addAddress(address);
+            address.addPrsonToAddress(personToUpdate);
+            personToUpdate.setAddress(address);
+            controller.updatePerson(personToUpdate);
+            addressController.updateAddress(address);
+            return Response.ok(address).build() ;
+        }
 
-        controller.updatePerson(person);
-        addressController.updateAddress(address);  //??
-        return Response.ok(person).build();
+
+
+
+
+
+
+
+
+
+//        Person person = controller.getPersonById(id);
+//        Address addressToUpdate = person.getAddress();
+//        addressToUpdate.setCountry(address.getCountry());
+//        addressToUpdate.setCity(address.getCity());
+//        addressToUpdate.setNumber(address.getNumber());
+//        addressToUpdate.setStreet(address.getStreet());
+//        List<Person> personList = address.getPersonList();
+//        personList.add(person);
+//        addressToUpdate.setPersonList(personList);
+//        person.setAddress(addressToUpdate);
+//
+//        controller.updatePerson(person);
+//        addressController.updateAddress(address);  //??
+//        return Response.ok(person).build();
     }
 
     /**
@@ -190,7 +227,7 @@ public class PersonResource {
             controller.updatePerson(person);
             return Response.ok(person).build();
         } else {
-            return Response.ok("Person with given id can't be found").build();
+            return Response.status(403).entity("Person with given id can't be found").build();
         }
     }
 }

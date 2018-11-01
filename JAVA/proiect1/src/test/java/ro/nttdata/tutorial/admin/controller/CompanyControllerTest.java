@@ -11,8 +11,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 import ro.nttdata.tutorial.admin.entity.Company;
 
 import javax.persistence.EntityManager;
-import javax.persistence.NamedQuery;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +57,7 @@ public class CompanyControllerTest {
         final String capturedQuery = captorString.getValue();
         final Class capturedClass = captorClass.getValue();
         verify(query, times(1)).executeUpdate();
-        assertEquals(capturedQuery, Company.DELETE_COMPANY_QUERY);
+        assertEquals( Company.DELETE_COMPANY_QUERY, capturedQuery);
         assertEquals(capturedClass, Company.class);
     }
 
@@ -104,7 +102,7 @@ public class CompanyControllerTest {
         final String capturedQuery = captorString.getValue();
         final Class capturedClass = captorClass.getValue();
         assertEquals(controllerCompanies, compList);
-        assertEquals(capturedQuery, Company.GET_ALL_COMPANIES_QUERY);
+        assertEquals( Company.GET_ALL_COMPANIES_QUERY, capturedQuery);
         assertEquals(capturedClass, Company.class);
     }
 
@@ -131,7 +129,7 @@ public class CompanyControllerTest {
             verify(entityManager).createNamedQuery(captorString.capture(), captorClass.capture());
             final String capturedQuery = captorString.getValue();
             final Class capturedClass = captorClass.getValue();
-            assertEquals(capturedQuery, Company.GET_ALL_COMPANIES_QUERY);
+            assertEquals(Company.GET_ALL_COMPANIES_QUERY, capturedQuery);
             assertEquals(capturedClass, Company.class);
         }
     }
@@ -145,7 +143,7 @@ public class CompanyControllerTest {
         try {
             companyController.getAllCompanies();
         } catch (NullPointerException e) {
-            assertEquals(e.getMessage(), Company.NULL_LIST_EXCEPTION_MESSAGE);
+            assertEquals(Company.NULL_LIST_EXCEPTION_MESSAGE, e.getMessage());
         }
     }
 

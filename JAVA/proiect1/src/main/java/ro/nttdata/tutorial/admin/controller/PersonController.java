@@ -51,7 +51,11 @@ public class PersonController {
      */
     public List<Person> getAllPersons() {
         TypedQuery query = entityManager.createNamedQuery(Person.SELECT_PERSONS_QUERY, Person.class);
-        return query.getResultList();
+        if (query.getResultList() == null) {
+            throw new NullPointerException(Person.NULL_LIST_EXCEPTION_MESSAGE);
+        } else if (query.getResultList().isEmpty()){
+            throw new IllegalStateException(Person.EMPTY_LIST_EXCEPTION_MESSAGE);
+        } else return query.getResultList();
     }
 
     /**

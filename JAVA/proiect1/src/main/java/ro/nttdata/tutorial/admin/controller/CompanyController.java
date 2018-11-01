@@ -54,12 +54,12 @@ public class CompanyController {
      * @return
      * @throws Exception
      */
-    public List<Company> getAllCompanies() throws Exception {
+    public List<Company> getAllCompanies() {
         TypedQuery<Company> query = entityManager.createNamedQuery(Company.GET_ALL_COMPANIES_QUERY, Company.class);
         if (query.getResultList() == null) {
             throw new NullPointerException(Company.NULL_LIST_EXCEPTION_MESSAGE);
         } else if (query.getResultList().isEmpty()) {
-            throw new Exception(Company.EMPTY_LIST_EXCEPTION_MESSAGE);
+            throw new IllegalStateException(Company.EMPTY_LIST_EXCEPTION_MESSAGE);
         } else return query.getResultList();
     }
 
